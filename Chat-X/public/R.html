@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>R Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Data Types & Operators</a></li>
+                <li><a href="#module3">Control Structures</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Data Manipulation</a></li>
+                <li><a href="#module6">Data Visualization</a></li>
+                <li><a href="#module7">File I/O</a></li>
+                <li><a href="#module8">Packages & Libraries</a></li>
+                <li><a href="#module9">Advanced Topics</a></li>
+                <li><a href="#module10">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to R Programming</h2>
+            <h3>1.1 Overview of R</h3>
+            <p>R is a programming language and free software environment for statistical computing and graphics...</p>
+            <pre><code># Install R packages
+install.packages("ggplot2")
+
+# Load a library
+library(ggplot2)
+
+# Basic R code
+print("Hello, World!")
+            </code></pre>
+            <h3>1.2 History of R</h3>
+            <p>R was created by Ross Ihaka and Robert Gentleman in 1993 as a project at the University of Auckland...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Data Types & Operators</h2>
+            <h3>2.1 Data Types</h3>
+            <p>Basic data types in R include <code>numeric</code>, <code>integer</code>, <code>character</code>, and <code>logical</code>...</p>
+            <pre><code># Define variables of different types
+num <- 42
+int <- 10L
+char <- "Hello"
+logi <- TRUE
+
+# Print variables
+print(num)
+print(int)
+print(char)
+print(logi)
+            </code></pre>
+            <h3>2.2 Operators</h3>
+            <p>Operators in R include arithmetic, relational, logical, and assignment operators...</p>
+            <pre><code># Arithmetic operations
+a <- 5
+b <- 3
+sum <- a + b
+diff <- a - b
+prod <- a * b
+quot <- a / b
+mod <- a %% b
+
+# Print results
+print(paste("Sum:", sum))
+print(paste("Difference:", diff))
+print(paste("Product:", prod))
+print(paste("Quotient:", quot))
+print(paste("Modulus:", mod))
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Structures</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>If-Else statements help in making decisions in R programming...</p>
+            <pre><code># Conditional statement
+number <- 15
+
+if (number %% 2 == 0) {
+    print("The number is even.")
+} else {
+    print("The number is odd.")
+}
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Loops allow you to execute a block of code multiple times...</p>
+            <pre><code># For loop
+for (i in 1:5) {
+    print(paste("For loop iteration", i))
+}
+
+# While loop
+j <- 1
+while (j <= 5) {
+    print(paste("While loop iteration", j))
+    j <- j + 1
+}
+
+# Repeat loop
+k <- 1
+repeat {
+    print(paste("Repeat loop iteration", k))
+    k <- k + 1
+    if (k > 5) break
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Function Basics</h3>
+            <p>Functions in R help in organizing code into reusable blocks...</p>
+            <pre><code># Define a function
+greet <- function() {
+    print("Hello, World!")
+}
+
+# Call the function
+greet()
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code># Function with parameters
+add <- function(a, b) {
+    return(a + b)
+}
+
+# Call the function and print result
+result <- add(5, 3)
+print(paste("Sum:", result))
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Data Manipulation</h2>
+            <h3>5.1 Working with Data Frames</h3>
+            <p>Data frames are used to store tabular data in R...</p>
+            <pre><code># Create a data frame
+df <- data.frame(Name = c("Alice", "Bob", "Carol"),
+                 Age = c(25, 30, 35))
+
+# Print the data frame
+print(df)
+            </code></pre>
+            <h3>5.2 Data Transformation with dplyr</h3>
+            <p>The <code>dplyr</code> package provides tools for data manipulation...</p>
+            <pre><code># Load dplyr
+library(dplyr)
+
+# Use dplyr functions
+df_transformed <- df %>%
+    filter(Age > 25) %>%
+    mutate(AgeInMonths = Age * 12)
+
+# Print the transformed data frame
+print(df_transformed)
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Data Visualization</h2>
+            <h3>6.1 Introduction to ggplot2</h3>
+            <p><code>ggplot2</code> is a popular package for creating graphics in R...</p>
+            <pre><code># Load ggplot2
+library(ggplot2)
+
+# Create a simple plot
+ggplot(df, aes(x = Name, y = Age)) +
+    geom_bar(stat = "identity") +
+    theme_minimal() +
+    labs(title = "Age of Individuals", x = "Name", y = "Age")
+            </code></pre>
+            <h3>6.2 Customizing Plots</h3>
+            <p>Customizations can enhance the clarity and presentation of your plots...</p>
+            <pre><code># Customize the plot
+ggplot(df, aes(x = Name, y = Age, fill = Name)) +
+    geom_bar(stat = "identity") +
+    theme_light() +
+    labs(title = "Customized Plot", x = "Name", y = "Age") +
+    scale_fill_brewer(palette = "Set3")
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: File I/O</h2>
+            <h3>7.1 Reading Files</h3>
+            <p>R provides functions for reading data from various file formats...</p>
+            <pre><code># Read CSV file
+data <- read.csv("data.csv")
+
+# Print the first few rows
+head(data)
+            </code></pre>
+            <h3>7.2 Writing Files</h3>
+            <p>Write data frames to files in different formats...</p>
+            <pre><code># Write data frame to CSV
+write.csv(df, "output.csv", row.names = FALSE)
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Packages & Libraries</h2>
+            <h3>8.1 Installing Packages</h3>
+            <p>Packages extend the functionality of R...</p>
+            <pre><code># Install a package
+install.packages("dplyr")
+
+# Load the package
+library(dplyr)
+            </code></pre>
+            <h3>8.2 Using Packages</h3>
+            <p>Once installed, packages can be used to enhance your R scripts...</p>
+            <pre><code># Use dplyr functions
+data_transformed <- df %>%
+    arrange(desc(Age))
+
+# Print the transformed data
+print(data_transformed)
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Advanced Topics</h2>
+            <h3>9.1 Writing Efficient R Code</h3>
+            <p>Learn techniques for optimizing your R code...</p>
+            <pre><code># Vectorized operations
+result <- sum(1:1000000)
+print(result)
+            </code></pre>
+            <h3>9.2 Profiling and Debugging</h3>
+            <p>Tools and methods for profiling and debugging your R code...</p>
+            <pre><code># Profiling example
+Rprof("profile.out")
+# Your R code here
+Rprof(NULL)
+summaryRprof("profile.out")
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Best Practices</h2>
+            <h3>10.1 Writing Readable Code</h3>
+            <p>Best practices for writing clean and maintainable R code...</p>
+            <pre><code># Example of readable code
+calculate_mean <- function(values) {
+    mean_value <- mean(values)
+    return(mean_value)
+}
+
+data <- c(1, 2, 3, 4, 5)
+mean_result <- calculate_mean(data)
+print(paste("Mean:", mean_result))
+            </code></pre>
+            <h3>10.2 Documenting Code</h3>
+            <p>Documenting your code for better understanding and maintenance...</p>
+            <pre><code># Documenting code with comments
+# This function calculates the sum of two numbers
+sum_numbers <- function(a, b) {
+    return(a + b)
+}
+
+result <- sum_numbers(10, 5)
+print(paste("Sum:", result))
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

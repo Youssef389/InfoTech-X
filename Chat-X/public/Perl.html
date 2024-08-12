@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perl Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Perl Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Basic Syntax & Data Types</a></li>
+                <li><a href="#module3">Subroutines & Functions</a></li>
+                <li><a href="#module4">File Handling</a></li>
+                <li><a href="#module5">Regular Expressions</a></li>
+                <li><a href="#module6">Modules & Packages</a></li>
+                <li><a href="#module7">Error Handling</a></li>
+                <li><a href="#module8">OOP</a></li>
+                <li><a href="#module9">Advanced Topics</a></li>
+                <li><a href="#module10">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Perl</h2>
+            <h3>1.1 Overview of Perl</h3>
+            <p>Perl is a high-level, general-purpose programming language known for its text-processing capabilities...</p>
+            <pre><code>#!/usr/bin/perl
+
+print "Hello, World!\n";
+            </code></pre>
+            <h3>1.2 History and Evolution</h3>
+            <p>Perl was developed by Larry Wall in 1987 as a Unix scripting language to make report processing easier...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic Syntax and Data Types</h2>
+            <h3>2.1 Variables</h3>
+            <p>Perl has three types of variables: scalars, arrays, and hashes...</p>
+            <pre><code>#!/usr/bin/perl
+
+my $scalar = "Hello, World!";
+my @array = (1, 2, 3, 4, 5);
+my %hash = (key1 => 'value1', key2 => 'value2');
+
+print "$scalar\n";
+print "$array[0]\n";
+print "$hash{key1}\n";
+            </code></pre>
+            <h3>2.2 Operators</h3>
+            <p>Operators in Perl include arithmetic, relational, and logical operators...</p>
+            <pre><code>#!/usr/bin/perl
+
+my $a = 10;
+my $b = 20;
+print "$a + $b = ", $a + $b, "\n";
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Subroutines and Functions</h2>
+            <h3>3.1 Defining and Calling Subroutines</h3>
+            <p>Subroutines in Perl are defined using the `sub` keyword...</p>
+            <pre><code>#!/usr/bin/perl
+
+sub greet {
+    print "Hello, World!\n";
+}
+
+greet();
+            </code></pre>
+            <h3>3.2 Parameters and Return Values</h3>
+            <p>Subroutines can accept parameters and return values...</p>
+            <pre><code>#!/usr/bin/perl
+
+sub add {
+    my ($a, $b) = @_;
+    return $a + $b;
+}
+
+my $result = add(5, 3);
+print "Sum: $result\n";
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: File Handling</h2>
+            <h3>4.1 Reading from Files</h3>
+            <p>Files can be read using the `open` and `readline` functions...</p>
+            <pre><code>#!/usr/bin/perl
+
+open(my $fh, '<', 'file.txt') or die "Cannot open file: $!";
+while (my $line = <$fh>) {
+    print $line;
+}
+close($fh);
+            </code></pre>
+            <h3>4.2 Writing to Files</h3>
+            <p>Files can be written using the `open` and `print` functions...</p>
+            <pre><code>#!/usr/bin/perl
+
+open(my $fh, '>', 'file.txt') or die "Cannot open file: $!";
+print $fh "Hello, World!\n";
+close($fh);
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Regular Expressions</h2>
+            <h3>5.1 Basics of Regex</h3>
+            <p>Regular expressions are used for pattern matching...</p>
+            <pre><code>#!/usr/bin/perl
+
+my $text = "Hello, World!";
+if ($text =~ /World/) {
+    print "Pattern found!\n";
+}
+            </code></pre>
+            <h3>5.2 Substitution and Translation</h3>
+            <p>Regular expressions can also be used for substitution and translation...</p>
+            <pre><code>#!/usr/bin/perl
+
+$text =~ s/World/Perl/;
+print "$text\n";
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Modules and Packages</h2>
+            <h3>6.1 Using CPAN Modules</h3>
+            <p>CPAN (Comprehensive Perl Archive Network) offers a vast collection of modules...</p>
+            <pre><code>#!/usr/bin/perl
+
+use LWP::Simple;
+
+my $content = get('http://www.example.com');
+print $content;
+            </code></pre>
+            <h3>6.2 Creating and Using Packages</h3>
+            <p>Packages help in organizing code into modules...</p>
+            <pre><code>package MyPackage;
+
+sub hello {
+    print "Hello from MyPackage!\n";
+}
+
+1;
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Error Handling</h2>
+            <h3>7.1 Error Handling with `eval`</h3>
+            <p>Errors can be handled using the `eval` block...</p>
+            <pre><code>#!/usr/bin/perl
+
+eval {
+    my $result = 1 / 0;
+};
+if ($@) {
+    print "Error: $@\n";
+}
+            </code></pre>
+            <h3>7.2 Using `die` and `warn`</h3>
+            <p>The `die` and `warn` functions provide error messages...</p>
+            <pre><code>#!/usr/bin/perl
+
+open(my $fh, '<', 'file.txt') or die "Cannot open file: $!";
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Object-Oriented Programming</h2>
+            <h3>8.1 Introduction to OOP in Perl</h3>
+            <p>Perl supports object-oriented programming...</p>
+            <pre><code>package Person;
+
+sub new {
+    my $class = shift;
+    my $self = {
+        name => shift,
+    };
+    bless $self, $class;
+    return $self;
+}
+
+sub greet {
+    my $self = shift;
+    print "Hello, ", $self->{name}, "!\n";
+}
+
+1;
+            </code></pre>
+            <h3>8.2 Creating Classes and Objects</h3>
+            <p>Classes and objects are created using the `bless` function...</p>
+            <pre><code>#!/usr/bin/perl
+
+use Person;
+
+my $person = Person->new("Alice");
+$person->greet();
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Advanced Topics</h2>
+            <h3>9.1 References</h3>
+            <p>References allow for complex data structures...</p>
+            <pre><code>#!/usr/bin/perl
+
+my $array_ref = [1, 2, 3];
+print $array_ref->[0], "\n";
+            </code></pre>
+            <h3>9.2 File and Directory Manipulation</h3>
+            <p>Perl provides functions to manipulate files and directories...</p>
+            <pre><code>#!/usr/bin/perl
+
+use File::Spec;
+
+my $file = File::Spec->catfile('path', 'to', 'file.txt');
+print "File path: $file\n";
+            </code></pre>
+            <h3>9.3 Network Programming</h3>
+            <p>Perl supports network programming...</p>
+            <pre><code>#!/usr/bin/perl
+
+use IO::Socket::INET;
+
+my $socket = new IO::Socket::INET(
+    PeerAddr => 'www.example.com',
+    PeerPort => '80',
+    Proto    => 'tcp',
+) or die "Cannot connect to server: $!\n";
+
+print $socket "GET / HTTP/1.0\r\n\r\n";
+while (my $line = <$socket>) {
+    print $line;
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Perl Best Practices</h2>
+            <h3>10.1 Code Style and Documentation</h3>
+            <p>Following best practices in coding style and documentation helps maintain readability and usability...</p>
+            <pre><code># This is a comment
+# Use strict and warnings
+
+use strict;
+use warnings;
+
+my $variable = 'value';
+print "$variable\n";
+            </code></pre>
+            <h3>10.2 Performance Tips</h3>
+            <p>Optimizing Perl code for performance...</p>
+            <pre><code># Use efficient algorithms
+my @array = (1 .. 1000000);
+my $sum = 0;
+
+foreach my $value (@array) {
+    $sum += $value;
+}
+print "Sum: $sum\n";
+            </code></pre>
+            <h3>10.3 Security Considerations</h3>
+            <p>Security practices in Perl programming...</p>
+            <pre><code>#!/usr/bin/perl
+
+use CGI;
+
+my $cgi = CGI->new;
+my $input = $cgi->param('input');
+
+  if ($input =~ /<*script>/) {   # please remove "*" from <*script> in this line when you try the code 
+    die "Potential XSS attack!";
+}
+
+ print "Safe input: $input\n"; 
+
+            </code>
+            </pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

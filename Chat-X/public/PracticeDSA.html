@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Practice</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Easy</a></li>
+                <li><a href="#module2">Medium</a></li>
+                <li><a href="#module3">Hard</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Other sections/modules -->
+        <section class="container">
+            <section id="module1">
+                <h3>Easy</h3>
+                <a href="http://codeforces.com/contest/677/problem/A">Problem 1</a>
+                <a href="http://codeforces.com/contest/734/problem/A">Problem 2</a>
+                <a href="http://codeforces.com/contest/791/problem/A">Problem 3</a>
+                <a href="http://codeforces.com/contest/231/problem/A">Problem 4</a>
+                <a href="http://codeforces.com/contest/263/problem/A">Problem 5</a>
+                <a href="http://codeforces.com/contest/405/problem/A">Problem 6</a>
+                <a href="http://codeforces.com/contest/112/problem/A">Problem 7</a>
+                <a href="http://codeforces.com/contest/236/problem/A">Problem 8</a>
+                <a href="http://codeforces.com/contest/59/problem/A">Problem 9</a>
+                <a href="http://codeforces.com/contest/344/problem/A">Problem 10</a>
+                <a href="http://codeforces.com/contest/381/problem/A">Problem 11</a>
+                <a href="http://codeforces.com/contest/266/problem/A">Problem 12</a>
+                <a href="http://codeforces.com/contest/427/problem/A">Problem 13</a>
+                <a href="http://codeforces.com/contest/431/problem/A">Problem 14</a>
+                <a href="http://codeforces.com/contest/731/problem/A">Problem 15</a>
+                <a href="http://codeforces.com/contest/268/problem/A">Problem 16</a>
+                <a href="http://codeforces.com/contest/732/problem/A">Problem 17</a>
+                <a href="http://codeforces.com/contest/228/problem/A">Problem 18</a>
+                <a href="http://codeforces.com/contest/265/problem/A">Problem 19</a>
+                <a href="http://codeforces.com/contest/9/problem/A">Problem 20</a>
+                <a href="http://codeforces.com/contest/294/problem/A">Problem 21</a>
+                <a href="http://codeforces.com/contest/709/problem/A">Problem 22</a>
+                <a href="http://codeforces.com/contest/799/problem/A">Problem 23</a>
+                <a href="http://codeforces.com/contest/443/problem/A">Problem 24</a>
+                <a href="http://codeforces.com/contest/71/problem/A">Problem 25</a>
+                <a href="http://codeforces.com/contest/686/problem/A">Problem 26</a>
+                <a href="http://codeforces.com/contest/339/problem/A">Problem 27</a>
+                <a href="http://codeforces.com/contest/490/problem/A">Problem 28</a>
+                <a href="http://codeforces.com/contest/770/problem/A">Problem 29</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1051">Problem 30</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1047">Problem 31</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=349">Problem 32</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2172">Problem 33</a>
+                <a href="https://www.spoj.com/problems/EASYMATH/">Problem 34</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3300">Problem 35</a>
+                <a href="http://codeforces.com/contest/136/problem/A">Problem 36</a>
+                <a href="http://codeforces.com/contest/567/problem/A">Problem 37</a>
+                <a href="http://codeforces.com/contest/766/problem/A">Problem 38</a>
+                <a href="http://codeforces.com/problemset/problem/767/A">Problem 39</a>
+                <a href="http://codeforces.com/contest/768/problem/A">Problem 40</a>
+                <a href="http://codeforces.com/contest/520/problem/A">Problem 41</a>
+                <a href="http://codeforces.com/contest/160/problem/A">Problem 42</a>
+                <a href="http://codeforces.com/contest/474/problem/A">Problem 43</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=288">Problem 44</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1393">Problem 45</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3104">Problem 46</a>
+                <a href="http://codeforces.com/contest/216/problem/B">Problem 47</a>
+                <a href="http://www.spoj.com/problems/MAKETREE/">Problem 48</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1246">Problem 49</a>
+                <a href="http://codeforces.com/contest/127/problem/A">Problem 50</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=417">Problem 51</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=401">Problem 52</a>
+                <a href="http://codeforces.com/contest/270/problem/A">Problem 53</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1183">Problem 54</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1552">Problem 55</a>
+                <a href="http://codeforces.com/contest/287/problem/B">Problem 56</a>
+                <a href="https://codeforces.com/contest/165/problem/B">Problem 57</a>
+                <a href="http://www.spoj.com/problems/AGGRCOW/">Problem 58</a>
+                <a href="http://codeforces.com/contest/66/problem/B">Problem 59</a>
+                <a href="http://codeforces.com/contest/680/problem/B">Problem 60</a>
+                <a href="http://codeforces.com/contest/16/problem/B">Problem 61</a>
+                <a href="http://codeforces.com/contest/463/problem/B">Problem 62</a>
+                <a href="http://codeforces.com/contest/102/problem/B">Problem 63</a>
+                <a href="http://codeforces.com/contest/47/problem/B">Problem 64</a>
+                <a href="http://codeforces.com/contest/227/problem/B">Problem 65</a>
+                <a href="http://codeforces.com/contest/78/problem/B">Problem 66</a>
+                <a href="http://codeforces.com/contest/746/problem/B">Problem 67</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=310">Problem 68</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=305">Problem 69</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=654">Problem 70</a>
+                <a href="http://acm.timus.ru/problem.aspx?space=1&num=1607">Problem 71</a>
+                <a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=558">Problem 72</a>
+                <a href="http://codeforces.com/contest/492/problem/B">Problem 73</a>
+                <a href="http://codeforces.com/contest/433/problem/B">Problem 74</a>
+                <a href="http://codeforces.com/contest/363/problem/B">Problem 75</a>
+                <a href="http://codeforces.com/contest/6/problem/B">Problem 76</a>
+                <a href="http://codeforces.com/contest/688/problem/B">Problem 77</a>
+                <a href="http://codeforces.com/contest/451/problem/B">Problem 78</a>
+                <a href="http://codeforces.com/contest/810/problem/B">Problem 79</a>
+                <a href="http://codeforces.com/contest/79/problem/B">Problem 80</a>
+                <a href="http://codeforces.com/contest/88/problem/B">Problem 81</a>
+                <a href="http://codeforces.com/contest/766/problem/B">Problem 82</a>
+                <a href="http://www.spoj.com/problems/TOE1/">Problem 83</a>
+                <a href="http://www.spoj.com/problems/TOE2/">Problem 84</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=380">Problem 85</a>
+                <a href="https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1402">Problem 86</a>
+                <a href="http://codeforces.com/contest/242/problem/C">Problem 87</a>
+                <a href="https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1402">Problem 88</a>
+                <a href="https://www.spoj.com/problems/POSTERIN/">Problem 89</a>
+                <a href="http://codeforces.com/contest/129/problem/B">Problem 90</a>
+                <a href="http://codeforces.com/contest/476/problem/B">Problem 91</a>
+                <a href="http://codeforces.com/contest/469/problem/B">Problem 92</a>
+                <a href="http://codeforces.com/contest/714/problem/B">Problem 93</a>
+                <a href="http://codeforces.com/contest/714/problem/B">Problem 94</a>
+                <a href="http://codeforces.com/contest/400/problem/B">Problem 95</a>
+                <a href="http://codeforces.com/contest/152/problem/B">Problem 96</a>
+                <a href="http://codeforces.com/contest/186/problem/B">Problem 97</a>
+                <a href="http://codeforces.com/contest/148/problem/B">Problem 98</a>
+                <a href="http://codeforces.com/contest/699/problem/C">Problem 99</a>
+                <a href="http://codeforces.com/contest/545/problem/C">Problem 100</a>
+                <style>
+                   .container a{
+                        display: block;
+                        margin-bottom: 10px;
+                        color: #333;
+                        text-decoration: none;
+                        background: #ffd902;
+                        padding: 10px;
+                        border-radius: 12px;
+                        transition: background-color 0.3s, color 0.3s;
+                       text-align: center;
+                     
+                    }
+
+                    a:hover {
+                        background: #ffb600;
+                        color: #333;
+                    }
+
+                    body.dark-mode a {
+                        background: #333;
+                        color: #fff;
+                    }
+
+                    body.dark-mode a:hover {
+                        background: #444;
+                        color: #fff;
+                    }
+                </style>
+            
+            </section>
+
+            <section id="module2">
+                <h3>Medium</h3>
+                <a href="http://codeforces.com/contest/225/problem/C">Problem 1</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2035">Problem 2</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1806">Problem 3</a>
+                <a href="http://acm.timus.ru/problem.aspx?space=1&num=1054">Problem 4</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=314">Problem 5</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1018">Problem 6</a>
+                <a href="http://codeforces.com/contest/505/problem/B">Problem 7</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1088">Problem 8</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541">Problem 9</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2498">Problem 10</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1310">Problem 11</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58">Problem 12</a>
+                <a href="http://acm.timus.ru/problem.aspx?space=1&num=1100">Problem 13</a>
+                <a href="http://acm.timus.ru/problem.aspx?space=1&num=1349">Problem 14</a>
+                <a href="http://codeforces.com/contest/282/problem/B">Problem 15</a>
+                <a href="http://codeforces.com/contest/435/problem/B">Problem 16</a>
+                <a href="http://codeforces.com/contest/276/problem/B">Problem 17</a>
+                <a href="http://codeforces.com/contest/525/problem/B">Problem 18</a>
+                <a href="http://codeforces.com/contest/416/problem/C">Problem 19</a>
+                <a href="http://codeforces.com/contest/492/problem/C">Problem 20</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=41">Problem 21</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1217">Problem 22</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=725">Problem 23</a>
+                <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3615">Problem 24</a>
+                <a href="http://codeforces.com/contest/371/problem/B">Problem 25</a>
+                <a href="http://codeforces.com/contest/588/problem/B">Problem 26</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1335">Problem 27</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1109">Problem 28</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1266">Problem 29</a>
+                <a href="http://codeforces.com/contest/371/problem/C">Problem 30</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1658">Problem 31</a>
+                <a href="http://www.spoj.com/problems/BITMAP/">Problem 32</a>
+                <a href="https://www.codechef.com/problems/GCDMOD">Problem 33</a>
+                <a href="https://onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1784">Problem 34</a>
+                <a href="http://codeforces.com/contest/437/problem/B">Problem 35</a>
+                <a href="http://codeforces.com/contest/518/problem/B">Problem 36</a>
+                <a href="http://codeforces.com/contest/378/problem/B">Problem 37</a>
+                <a href="http://codeforces.com/contest/479/problem/B">Problem 38</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1410">Problem 39</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1753">Problem 40</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1243">Problem 41</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=439">Problem 42</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1994">Problem 43</a>
+                <a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=6100">Problem 44</a>
+                <a href="http://www.spoj.com/problems/QUEEN/">Problem 45</a>
+                <a href="https://www.hackerrank.com/challenges/sherlock-and-probability">Problem 46</a>
+                <a href="http://codeforces.com/contest/219/problem/B">Problem 47</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=129">Problem 48</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3276">Problem 49</a>
+                <a href="http://codeforces.com/contest/450/problem/B">Problem 50</a>
+                <a href="http://codeforces.com/contest/570/problem/B">Problem 51</a>
+                <a href="http://codeforces.com/contest/271/problem/B">Problem 52</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=977">Problem 53</a>
+                <a href="http://codeforces.com/contest/631/problem/B">Problem 54</a>
+                <a href="http://codeforces.com/contest/257/problem/B">Problem 55</a>
+                <a href="http://codeforces.com/contest/230/problem/B">Problem 56</a>
+                <a href="http://codeforces.com/contest/490/problem/B">Problem 57</a>
+                <a href="http://codeforces.com/contest/610/problem/B">Problem 58</a>
+                <a href="http://codeforces.com/contest/222/problem/B">Problem 59</a>
+                <a href="http://codeforces.com/contest/534/problem/B">Problem 60</a>
+                <a href="http://codeforces.com/contest/75/problem/B">Problem 61</a>
+                <a href="http://codeforces.com/contest/979/problem/B">Problem 62</a>
+                <a href="https://www.hackerrank.com/contests/infinitum18/challenges/tower-3-coloring">Problem 63</a>
+                <a href="http://codeforces.com/contest/445/problem/C">Problem 64</a>
+                <a href="https://www.hackerrank.com/challenges/a-circle-and-a-square">Problem 65</a>
+                <a href="http://codeforces.com/contest/151/problem/C">Problem 66</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1309">Problem 67</a>
+                <a href="http://www.spoj.com/problems/PIR/">Problem 68</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=49">Problem 69</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1403">Problem 70</a>
+                <a href="http://codeforces.com/contest/430/problem/B">Problem 71</a>
+                <a href="http://codeforces.com/contest/84/problem/B">Problem 72</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=512">Problem 73</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1927">Problem 74</a>
+                <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1742">Problem 75</a>
+                <a href="http://www.spoj.com/problems/SHOP/">Problem 76</a>
+                <a href="https://codeforces.com/contest/1064/problem/C">Problem 77</a>
+                <a href="https://codeforces.com/contest/1059/problem/C">Problem 78</a>
+                <a href="https://codeforces.com/gym/101933/problem/K">Problem 79</a>
+                <a href="http://codeforces.com/contest/816/problem/B">Problem 80</a>
+                <a href="http://codeforces.com/contest/426/problem/B">Problem 81</a>
+                <a href="http://codeforces.com/contest/675/problem/B">Problem 82</a>
+                <a href="http://codeforces.com/contest/975/problem/C">Problem 83</a>
+                <a href="http://codeforces.com/contest/1047/problem/C">Problem 84</a>
+                <a href="http://codeforces.com/contest/1075/problem/C">Problem 85</a>
+                <a href="http://codeforces.com/contest/758/problem/C">Problem 86</a>
+                <a href="http://codeforces.com/contest/454/problem/B">Problem 87</a>
+                <a href="http://codeforces.com/contest/199/problem/B">Problem 88</a>
+                <a href="http://codeforces.com/contest/431/problem/C">Problem 89</a>
+                <a href="http://codeforces.com/contest/118/problem/D">Problem 90</a>
+                <a href="http://codeforces.com/contest/384/problem/B">Problem 91</a>
+                <a href="http://codeforces.com/contest/233/problem/B">Problem 92</a>
+                <a href="http://codeforces.com/contest/496/problem/B">Problem 93</a>
+                <a href="http://codeforces.com/contest/471/problem/B">Problem 94</a>
+                <a href="http://codeforces.com/contest/146/problem/B">Problem 95</a>
+                <a href="http://codeforces.com/contest/719/problem/B">Problem 96</a>
+                <a href="http://codeforces.com/contest/131/problem/B">Problem 97</a>
+                <a href="http://codeforces.com/contest/23/problem/C">Problem 98</a>
+                <a href="http://codeforces.com/problemset/problem/869/C">Problem 99</a>
+                <a href="http://codeforces.com/contest/340/problem/B">Problem 100</a>
+            </section>
+
+            <section id="module3">
+                <h3>Hard</h3>
+                <a href="http://codeforces.com/contest/340/problem/C">Problem 1</a>
+                <a href="http://codeforces.com/contest/697/problem/C">Problem 2</a>
+                <a href="http://codeforces.com/contest/404/problem/C">Problem 3</a>
+                <a href="http://codeforces.com/contest/309/problem/C">Problem 4</a>
+                <a href="http://codeforces.com/contest/101/problem/B">Problem 5</a>
+                <a href="http://codeforces.com/problemset/problem/961/D">Problem 6</a>
+                <a href="http://codeforces.com/problemset/problem/955/C">Problem 7</a>
+                <a href="http://codeforces.com/contest/372/problem/B">Problem 8</a>
+                <a href="http://www.spoj.com/problems/CDC12_H">Problem 9</a>
+                <a href="http://www.spoj.com/problems/CNTPRIME">Problem 10</a>
+                <a href="http://www.spoj.com/problems/HORRIBLE">Problem 11</a>
+                <a href="http://www.spoj.com/problems/LITE/">Problem 12</a>
+                <a href="http://codeforces.com/contest/52/problem/C">Problem 13</a>
+                <a href="http://www.spoj.com/problems/CITY2/">Problem 14</a>
+                <a href="http://codeforces.com/problemset/problem/514/D">Problem 15</a>
+                <a href="http://www.spoj.com/problems/BRCKTS">Problem 16</a>
+                <a href="http://codeforces.com/contest/460/problem/C">Problem 17</a>
+                <a href="http://codeforces.com/contest/216/problem/C">Problem 18</a>
+                <a href="http://codeforces.com/contest/535/problem/C">Problem 19</a>
+                <a href="http://codeforces.com/contest/189/problem/C">Problem 20</a>
+                <a href="http://codeforces.com/contest/216/problem/D">Problem 21</a>
+                <a href="http://codeforces.com/contest/334/problem/D">Problem 22</a>
+                <a href="http://codeforces.com/contest/676/problem/C">Problem 23</a>
+                <a href="http://codeforces.com/contest/472/problem/D">Problem 24</a>
+                <a href="http://codeforces.com/contest/80/problem/D">Problem 25</a>
+                <a href="http://codeforces.com/contest/186/problem/C">Problem 26</a>
+                <a href="http://codeforces.com/contest/667/problem/C">Problem 27</a>
+                <a href="http://codeforces.com/contest/287/problem/C">Problem 28</a>
+                <a href="http://codeforces.com/contest/116/problem/C">Problem 29</a>
+                <a href="http://codeforces.com/contest/342/problem/C">Problem 30</a>
+                <a href="http://codeforces.com/contest/233/problem/C">Problem 31</a>
+                <a href="http://codeforces.com/contest/25/problem/C">Problem 32</a>
+                <a href="http://codeforces.com/contest/203/problem/C">Problem 33</a>
+                <a href="http://codeforces.com/contest/236/problem/C">Problem 34</a>
+                <a href="http://codeforces.com/contest/376/problem/C">Problem 35</a>
+                <a href="http://codeforces.com/contest/439/problem/C">Problem 36</a>
+                <a href="http://codeforces.com/contest/557/problem/C">Problem 37</a>
+                <a href="http://poj.org/problem?id=3461">Problem 38</a>
+                <a href="http://www.spoj.com/problems/NHAY">Problem 39</a>
+                <a href="http://www.spoj.com/problems/TESSER/">Problem 40</a>
+                <a href="http://www.spoj.com/problems/PERIOD/">Problem 41</a>
+                <a href="http://codeforces.com/contest/432/problem/D">Problem 42</a>
+                <a href="http://codeforces.com/contest/535/problem/D">Problem 43</a>
+                <a href="http://codeforces.com/contest/54/problem/C">Problem 44</a>
+                <a href="http://codeforces.com/contest/500/problem/D">Problem 45</a>
+                <a href="http://codeforces.com/contest/842/problem/D">Problem 46</a>
+                <a href="http://codeforces.com/contest/709/problem/D">Problem 47</a>
+                <a href="http://codeforces.com/contest/680/problem/C">Problem 48</a>
+                <a href="http://codeforces.com/contest/401/problem/C">Problem 49</a>
+                <a href="http://codeforces.com/contest/148/problem/D">Problem 50</a>
+                <a href="https://codeforces.com/contest/1147/problem/B">Problem 51</a>
+                <a href="http://www.spoj.com/problems/MELE3/">Problem 52</a>
+                <a href="http://www.spoj.com/problems/ROADS/en/">Problem 53</a>
+                <a href="http://www.spoj.com/problems/ORDERS/">Problem 54</a>
+                <a href="http://codeforces.com/contest/268/problem/E">Problem 55</a>
+                <a href="http://codeforces.com/contest/200/problem/C">Problem 56</a>
+                <a href="http://codeforces.com/contest/489/problem/C">Problem 57</a>
+                <a href="http://www.spoj.com/problems/WEIRDFN/">Problem 58</a>
+                <a href="http://www.spoj.com/problems/DICTSUB/">Problem 59</a>
+                <a href="http://codeforces.com/contest/689/problem/D">Problem 60</a>
+                <a href="http://www.spoj.com/problems/SEGSQRSS">Problem 61</a>
+                <a href="http://codeforces.com/contest/513/problem/C">Problem 62</a>
+                <a href="https://codeforces.com/contest/1138/problem/D">Problem 63</a>
+                <a href="http://codeforces.com/contest/152/problem/C">Problem 64</a>
+                <a href="http://codeforces.com/contest/361/problem/C">Problem 65</a>
+                <a href="http://codeforces.com/contest/540/problem/C">Problem 66</a>
+                <a href="http://codeforces.com/contest/337/problem/D">Problem 67</a>
+                <a href="https://codeforces.com/contest/665/problem/E">Problem 68</a>
+                <a href="http://codeforces.com/contest/363/problem/C">Problem 69</a>
+                <a href="http://codeforces.com/contest/194/problem/C">Problem 70</a>
+                <a href="http://codeforces.com/contest/265/problem/C">Problem 71</a>
+                <a href="http://codeforces.com/gym/101864/problem/A">Problem 72</a>
+                <a href="http://codeforces.com/gym/101864/problem/L">Problem 73</a>
+                <a href="http://codeforces.com/contest/28/problem/C">Problem 74</a>
+                <a href="http://www.spoj.com/problems/IM">Problem 75</a>
+                <a href="http://codeforces.com/contest/467/problem/D">Problem 76</a>
+                <a href="http://codeforces.com/contest/676/problem/D">Problem 77</a>
+                <a href="http://codeforces.com/contest/418/problem/B">Problem 78</a>
+                <a href="http://codeforces.com/gym/101589/problem/F">Problem 79</a>
+                <a href="http://codeforces.com/problemset/problem/1016/D">Problem 80</a>
+                <a href="http://codeforces.com/contest/26/problem/D">Problem 81</a>
+                <a href="http://codeforces.com/contest/1012/problem/B">Problem 82</a>
+                <a href="http://codeforces.com/contest/1010/problem/C">Problem 83</a>
+                <a href="http://codeforces.com/contest/633/problem/D">Problem 84</a>
+                <a href="http://codeforces.com/contest/621/problem/D">Problem 85</a>
+                <a href="https://codeforces.com/gym/101992/problem/D">Problem 86</a>
+                <a href="http://codeforces.com/contest/255/problem/C">Problem 87</a>
+                <a href="http://codeforces.com/contest/59/problem/C">Problem 88</a>
+                <a href="http://codeforces.com/contest/495/problem/C">Problem 89</a>
+                <a href="http://codeforces.com/contest/69/problem/C">Problem 90</a>
+                <a href="http://codeforces.com/contest/322/problem/C">Problem 91</a>
+                <a href="http://codeforces.com/contest/716/problem/C">Problem 92</a>
+                <a href="http://codeforces.com/contest/366/problem/C">Problem 93</a>
+                <a href="http://codeforces.com/contest/104/problem/C">Problem 94</a>
+                <a href="http://codeforces.com/contest/508/problem/C">Problem 95</a>
+                <a href="http://codeforces.com/contest/895/problem/C">Problem 96</a>
+                <a href="http://codeforces.com/contest/280/problem/C">Problem 97</a>
+                <a href="http://codeforces.com/contest/110/problem/D">Problem 98</a>
+                <a href="http://codeforces.com/contest/163/problem/C">Problem 99</a>
+                <a href="http://codeforces.com/contest/455/problem/B">Problem 100</a>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+    </setion>
+</body>
+</html>

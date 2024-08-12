@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        /* body.dark-mode h3 {
+           color: #ffffff;
+        } */
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Variables & Data Types</a></li>
+                <li><a href="#module3">Operators</a></li>
+                <li><a href="#module4">Control Structures</a></li>
+                <li><a href="#module5">Functions</a></li>
+                <li><a href="#module6">Objects & Arrays</a></li>
+                <li><a href="#module7">DOM Manipulation</a></li>
+                <li><a href="#module8">Asynchronous JavaScript</a></li>
+                <li><a href="#module9">Error Handling</a></li>
+                <li><a href="#module10">Modules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to JavaScript</h2>
+            <h3>1.1 Overview of JavaScript</h3>
+            <p>JavaScript is a versatile programming language used primarily for creating dynamic and interactive web pages...</p>
+            <pre><code>// Displaying a message in the console
+console.log('Hello, World!');
+            </code></pre>
+            <h3>1.2 Setting up the Environment</h3>
+            <p>JavaScript can be written directly in HTML files using the <code>&lt;script&gt;</code> tag or in separate .js files...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Variables and Data Types</h2>
+            <h3>2.1 Understanding Variables</h3>
+            <p>Variables are used to store data values...</p>
+            <pre><code>// Declaring variables
+let name = 'John';
+const age = 30;
+var isStudent = true;
+
+console.log(name);
+console.log(age);
+console.log(isStudent);
+            </code></pre>
+            <h3>2.2 Primitive Data Types</h3>
+            <p>JavaScript has several primitive data types: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>undefined</code>, and <code>null</code>...</p>
+            <pre><code>// Type conversion
+let num = '25';
+num = Number(num); // Convert string to number
+console.log(num + 5); // Output: 30
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Operators</h2>
+            <h3>3.1 Arithmetic Operators</h3>
+            <p>Arithmetic operators are used to perform mathematical operations...</p>
+            <pre><code>// Arithmetic operators
+let x = 10;
+let y = 5;
+
+console.log(x + y); // Addition
+console.log(x - y); // Subtraction
+console.log(x * y); // Multiplication
+console.log(x / y); // Division
+console.log(x % y); // Modulus
+            </code></pre>
+            <h3>3.2 Comparison Operators</h3>
+            <p>Comparison operators are used to compare values...</p>
+            <pre><code>// Comparison operators
+let a = 10;
+let b = 20;
+
+console.log(a == b); // Equal to
+console.log(a != b); // Not equal to
+console.log(a > b);  // Greater than
+console.log(a < b);  // Less than
+            </code></pre>
+            <h3>3.3 Logical Operators</h3>
+            <p>Logical operators are used to combine boolean values...</p>
+            <pre><code>// Logical operators
+let p = true;
+let q = false;
+
+console.log(p && q); // Logical AND
+console.log(p || q); // Logical OR
+console.log(!p);     // Logical NOT
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Control Structures</h2>
+            <h3>4.1 Conditional Statements</h3>
+            <p>Conditional statements are used to perform different actions based on different conditions...</p>
+            <pre><code>// if...else statement
+let score = 85;
+
+if (score >= 90) {
+    console.log('A');
+} else if (score >= 80) {
+    console.log('B');
+} else {
+    console.log('C');
+}
+            </code></pre>
+            <h3>4.2 Loops</h3>
+            <p>Loops are used to execute a block of code repeatedly...</p>
+            <pre><code>// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// while loop
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+
+// do...while loop
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Functions</h2>
+            <h3>5.1 Function Declaration and Expression</h3>
+            <p>Functions are blocks of code designed to perform a particular task...</p>
+            <pre><code>// Function declaration
+function greet(name) {
+    return 'Hello, ' + name;
+}
+
+console.log(greet('Alice'));
+
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+console.log(add(5, 10));
+            </code></pre>
+            <h3>5.2 Arrow Functions</h3>
+            <p>Arrow functions provide a more concise syntax for writing function expressions...</p>
+            <pre><code>// Arrow function
+const multiply = (a, b) => a * b;
+
+console.log(multiply(5, 10));
+            </code></pre>
+            <h3>5.3 Callback Functions</h3>
+            <p>Callback functions are functions passed as arguments to other functions...</p>
+            <pre><code>// Callback function
+function processData(data, callback) {
+    console.log('Processing data...');
+    callback(data);
+}
+
+processData('Sample data', function(data) {
+    console.log('Callback executed with data:', data);
+});
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Objects and Arrays</h2>
+            <h3>6.1 Creating and Using Objects</h3>
+            <p>Objects are collections of key-value pairs...</p>
+            <pre><code>// Creating an object
+const person = {
+    name: 'John',
+    age: 30,
+    greet: function() {
+        console.log('Hello, ' + this.name);
+    }
+};
+
+console.log(person.name);
+person.greet();
+            </code></pre>
+            <h3>6.2 Working with Arrays</h3>
+            <p>Arrays are ordered collections of values...</p>
+            <pre><code>// Array methods
+const numbers = [1, 2, 3, 4, 5];
+
+console.log(numbers.length); // Length of the array
+numbers.push(6); // Add an element
+console.log(numbers);
+
+numbers.pop(); // Remove the last element
+console.log(numbers);
+
+numbers.forEach(number => console.log(number)); // Iterate through elements
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: DOM Manipulation</h2>
+            <h3>7.1 Selecting Elements</h3>
+            <p>The Document Object Model (DOM) represents the structure of a web page...</p>
+            <pre><code>// Selecting elements
+const title = document.getElementById('title');
+const paragraphs = document.getElementsByTagName('p');
+const items = document.querySelectorAll('.item');
+
+console.log(title);
+console.log(paragraphs);
+console.log(items);
+            </code></pre>
+            <h3>7.2 Modifying Elements</h3>
+            <p>Manipulating DOM elements allows you to change the content and style of a page...</p>
+            <pre><code>// Modifying elements
+const header = document.querySelector('h1');
+header.textContent = 'New Title';
+header.style.color = 'blue';
+            </code></pre>
+            <h3>7.3 Event Handling</h3>
+            <p>Event handling allows you to execute code in response to user interactions...</p>
+            <pre><code>// Event handling
+const button = document.querySelector('button');
+
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Asynchronous JavaScript</h2>
+            <h3>8.1 Callbacks</h3>
+            <p>Callbacks are functions passed as arguments to other functions...</p>
+            <pre><code>// Callback function
+function fetchData(callback) {
+    setTimeout(() => {
+        callback('Data received');
+    }, 1000);
+}
+
+fetchData(data => console.log(data));
+            </code></pre>
+            <h3>8.2 Promises</h3>
+            <p>Promises represent the eventual completion (or failure) of an asynchronous operation...</p>
+            <pre><code>// Promise
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('Data received');
+    }, 1000);
+});
+
+promise.then(data => console.log(data));
+            </code></pre>
+            <h3>8.3 Async/Await</h3>
+            <p>Async/await provides a more readable way to handle asynchronous code...</p>
+            <pre><code>// Async/await
+async function fetchData() {
+    const data = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Data received');
+        }, 1000);
+    });
+    console.log(data);
+}
+
+fetchData();
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Error Handling</h2>
+            <h3>9.1 Try...Catch</h3>
+            <p>Error handling is crucial for robust code...</p>
+            <pre><code>// Try...catch
+try {
+    const result = riskyFunction();
+    console.log(result);
+} catch (error) {
+    console.error('Error:', error.message);
+}
+
+function riskyFunction() {
+    throw new Error('Something went wrong');
+}
+            </code></pre>
+            <h3>9.2 Throwing Errors</h3>
+            <p>You can throw your own errors using the <code>throw</code> statement...</p>
+            <pre><code>// Throwing errors
+function validateAge(age) {
+    if (age < 0) {
+        throw new Error('Age cannot be negative');
+    }
+    return age;
+}
+
+console.log(validateAge(25));
+console.log(validateAge(-5)); // This will throw an error
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Modules</h2>
+            <h3>10.1 Importing and Exporting Modules</h3>
+            <p>Modules allow you to split your code into separate files...</p>
+            <pre><code>// module.js
+export const greeting = 'Hello';
+export function greet(name) {
+    return `${greeting}, ${name}!`;
+}
+
+// main.js
+import { greeting, greet } from './module.js';
+
+console.log(greeting);
+console.log(greet('Alice'));
+            </code></pre>
+            <h3>10.2 Using ES6 Modules</h3>
+            <p>ES6 modules help in organizing your code...</p>
+            <pre><code>// Using ES6 modules
+import * as math from './math.js';
+
+console.log(math.add(2, 3));
+console.log(math.subtract(5, 2));
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

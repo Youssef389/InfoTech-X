@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive C++ Programming Course covering basics to advanced topics.">
+    <title>C++ Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+            color: #ffffff;
+        }
+        body.dark-mode h2 {
+            color: #ffffff;
+        }
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+
+        .header-buttons button:focus {
+            outline: 2px solid #ffd902;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C++ Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn" aria-label="Home">🏠</button>
+            <button class="toggle-btn" id="toggleBtn" aria-label="Toggle Dark Mode">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Data Types & Variables</a></li>
+                <li><a href="#module3">Control Structures</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Arrays & Strings</a></li>
+                <li><a href="#module6">Pointers & References</a></li>
+                <li><a href="#module7">Dynamic Memory</a></li>
+                <li><a href="#module8">Classes & Objects</a></li>
+                <li><a href="#module9">Inheritance & Polymorphism</a></li>
+                <li><a href="#module10">Templates & STL</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to C++</h2>
+            <h3>1.1 Overview of C++</h3>
+            <p>C++ is a high-performance programming language that supports object-oriented, procedural, and generic programming...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+            </code></pre>
+            <h3>1.2 Setting up the Development Environment</h3>
+            <p>Instructions to install a C++ compiler and set up your development environment...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic Data Types and Variables</h2>
+            <h3>2.1 Fundamental Data Types</h3>
+            <p>C++ provides several built-in data types such as <code>int</code>, <code>float</code>, <code>double</code>, and <code>char</code>...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int age = 30;
+    float height = 5.9;
+    double pi = 3.141592;
+    char grade = 'A';
+
+    cout << "Age: " << age << endl;
+    cout << "Height: " << height << endl;
+    cout << "Pi: " << pi << endl;
+    cout << "Grade: " << grade << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>2.2 Variables and Constants</h3>
+            <p>How to declare and use variables and constants in C++...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    const int MAX_VALUE = 100;
+    int value = 50;
+
+    cout << "Max Value: " << MAX_VALUE << endl;
+    cout << "Value: " << value << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>2.3 Type Conversion</h3>
+            <p>Implicit and explicit type conversions in C++...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 10;
+    double result = num / 3.0;
+    cout << "Result: " << result << endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Structures</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>Using <code>if</code>, <code>else</code>, and <code>switch</code> statements...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 10;
+
+    if (num > 0) {
+        cout << "Positive number" << endl;
+    } else if (num < 0) {
+        cout << "Negative number" << endl;
+    } else {
+        cout << "Zero" << endl;
+    }
+
+    return 0;
+}
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Using <code>for</code>, <code>while</code>, and <code>do-while</code> loops...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 0; i < 5; i++) {
+        cout << "Iteration " << i << endl;
+    }
+
+    int j = 0;
+    while (j < 5) {
+        cout << "While loop iteration " << j << endl;
+        j++;
+    }
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Defining Functions</h3>
+            <p>How to define and call functions...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    cout << "Sum: " << result << endl;
+    return 0;
+}
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int main() {
+    int result = multiply(4, 5);
+    cout << "Product: " << result << endl;
+    return 0;
+}
+            </code></pre>
+            <h3>4.3 Function Overloading</h3>
+            <p>Defining multiple functions with the same name...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+int main() {
+    cout << "Int Sum: " << add(5, 3) << endl;
+    cout << "Double Sum: " << add(5.5, 3.2) << endl;
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Arrays and Strings</h2>
+            <h3>5.1 Arrays</h3>
+            <p>Arrays are collections of elements of the same type...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5};
+
+    for (int i = 0; i < 5; i++) {
+        cout << "Number: " << numbers[i] << endl;
+    }
+
+    return 0;
+}
+            </code></pre>
+            <h3>5.2 Strings</h3>
+            <p>Handling strings using the <code>string</code> class...</p>
+            <pre><code>#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string message = "Hello, C++!";
+    cout << "Message: " << message << endl;
+    return 0;
+}
+            </code></pre>
+            <h3>5.3 Multidimensional Arrays</h3>
+            <p>Arrays with more than one dimension...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Pointers and References</h2>
+            <h3>6.1 Understanding Pointers</h3>
+            <p>Pointers are variables that hold memory addresses...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int value = 10;
+    int *ptr = &value;
+
+    cout << "Value: " << value << endl;
+    cout << "Pointer: " << *ptr << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>6.2 Pointer Arithmetic</h3>
+            <p>Performing arithmetic operations with pointers...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int array[3] = {1, 2, 3};
+    int *ptr = array;
+
+    cout << "First element: " << *ptr << endl;
+    ptr++;
+    cout << "Second element: " << *ptr << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>6.3 References</h3>
+            <p>References provide an alias for another variable...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+void increment(int &value) {
+    value++;
+}
+
+int main() {
+    int num = 5;
+    increment(num);
+    cout << "Incremented Value: " << num << endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Dynamic Memory Management</h2>
+            <h3>7.1 Using `new` and `delete`</h3>
+            <p>Allocating and deallocating memory dynamically...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+int main() {
+    int *ptr = new int;
+    *ptr = 42;
+
+    cout << "Value: " << *ptr << endl;
+    delete ptr;
+
+    return 0;
+}
+            </code></pre>
+            <h3>7.2 Memory Leaks and Smart Pointers</h3>
+            <p>Handling memory leaks and using smart pointers...</p>
+            <pre><code>#include <iostream>
+#include <memory>
+using namespace std;
+
+int main() {
+    unique_ptr<int> ptr(new int);
+    *ptr = 100;
+
+    cout << "Value: " << *ptr << endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Classes and Objects</h2>
+            <h3>8.1 Basics of Classes and Objects</h3>
+            <p>Introduction to creating classes and objects...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+class Dog {
+public:
+    Dog(string name) : name(name) {}
+
+    void bark() {
+        cout << "Woof! My name is " << name << endl;
+    }
+
+private:
+    string name;
+};
+
+int main() {
+    Dog myDog("Buddy");
+    myDog.bark();
+
+    return 0;
+}
+            </code></pre>
+            <h3>8.2 Constructors and Destructors</h3>
+            <p>Using constructors and destructors to manage object lifecycle...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+class MyClass {
+public:
+    MyClass() {
+        cout << "Constructor called" << endl;
+    }
+
+    ~MyClass() {
+        cout << "Destructor called" << endl;
+    }
+};
+
+int main() {
+    MyClass obj;
+
+    return 0;
+}
+            </code></pre>
+            <h3>8.3 Member Functions and Access Specifiers</h3>
+            <p>Defining member functions and using access specifiers...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    void setName(string name) {
+        this->name = name;
+    }
+
+    string getName() {
+        return name;
+    }
+
+private:
+    string name;
+};
+
+int main() {
+    Person person;
+    person.setName("Alice");
+    cout << "Name: " << person.getName() << endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Inheritance and Polymorphism</h2>
+            <h3>9.1 Inheritance</h3>
+            <p>Using inheritance to extend classes...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout << "Animal sound" << endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void speak() {
+        cout << "Meow" << endl;
+    }
+};
+
+int main() {
+    Cat myCat;
+    myCat.speak();
+
+    return 0;
+}
+            </code></pre>
+            <h3>9.2 Virtual Functions and Polymorphism</h3>
+            <p>Implementing polymorphism using virtual functions...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void show() {
+        cout << "Base class" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void show() override {
+        cout << "Derived class" << endl;
+    }
+};
+
+int main() {
+    Base *ptr;
+    Derived obj;
+    ptr = &obj;
+
+    ptr->show();
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Templates and Standard Template Library (STL)</h2>
+            <h3>10.1 Function Templates</h3>
+            <p>Creating and using function templates...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+template <typename T>
+T max(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+int main() {
+    cout << "Max of 10 and 20: " << max(10, 20) << endl;
+    cout << "Max of 3.5 and 2.5: " << max(3.5, 2.5) << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>10.2 Class Templates</h3>
+            <p>Creating and using class templates...</p>
+            <pre><code>#include <iostream>
+using namespace std;
+
+template <class T>
+class Stack {
+private:
+    T arr[100];
+    int top;
+
+public:
+    Stack() : top(-1) {}
+
+    void push(T value) {
+        arr[++top] = value;
+    }
+
+    T pop() {
+        return arr[top--];
+    }
+};
+
+int main() {
+    Stack<int> intStack;
+    intStack.push(1);
+    cout << "Popped: " << intStack.pop() << endl;
+
+    return 0;
+}
+            </code></pre>
+            <h3>10.3 Using STL Containers</h3>
+            <p>Introduction to STL containers like <code>vector</code>, <code>list</code>, and <code>map</code>...</p>
+            <pre><code>#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> numbers = {1, 2, 3, 4, 5};
+
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 C++ Programming Course</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

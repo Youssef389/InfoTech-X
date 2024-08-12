@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive Python Programming Course covering basics to advanced topics.">
+    <title>Python Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+            color: #ffffff;
+        }
+        body.dark-mode h2 {
+            color: #ffffff;
+        }
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+
+        .header-buttons button:focus {
+            outline: 2px solid #ffd902;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Python Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn" aria-label="Home">🏠</button>
+            <button class="toggle-btn" id="toggleBtn" aria-label="Toggle Dark Mode">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Data Types & Variables</a></li>
+                <li><a href="#module3">Control Structures</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Lists & Tuples</a></li>
+                <li><a href="#module6">Dictionaries & Sets</a></li>
+                <li><a href="#module7">File Handling</a></li>
+                <li><a href="#module8">Error Handling</a></li>
+                <li><a href="#module9">Modules & Packages</a></li>
+                <li><a href="#module10">OOP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Python</h2>
+            <h3>1.1 Overview of Python</h3>
+            <p>Python is a high-level, interpreted programming language known for its readability and simplicity...</p>
+            <pre><code># Print Hello World
+print("Hello, World!")
+            </code></pre>
+            <h3>1.2 Setting up the Environment</h3>
+            <p>Instructions to install Python and set up the development environment...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Data Types and Variables</h2>
+            <h3>2.1 Data Types</h3>
+            <p>Basic data types in Python include <code>int</code>, <code>float</code>, <code>str</code>, and <code>bool</code>...</p>
+            <pre><code># Data types example
+age = 30
+height = 5.9
+pi = 3.141592
+name = "John Doe"
+
+print("Age:", age)
+print("Height:", height)
+print("Pi:", pi)
+print("Name:", name)
+            </code></pre>
+            <h3>2.2 Variables and Constants</h3>
+            <p>How to declare and use variables and constants in Python...</p>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Structures</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>Conditional statements in Python include <code>if</code>, <code>elif</code>, and <code>else</code>...</p>
+            <pre><code># Conditional example
+number = 15
+
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Python supports <code>for</code> and <code>while</code> loops for iterating over sequences...</p>
+            <pre><code># Loop examples
+# For loop
+for i in range(5):
+    print("For loop iteration", i)
+
+# While loop
+j = 0
+while j < 5:
+    print("While loop iteration", j)
+    j += 1
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Function Basics</h3>
+            <p>Functions in Python are defined using the <code>def</code> keyword...</p>
+            <pre><code># Function example
+def greet():
+    print("Hello, World!")
+
+greet()
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code># Function with parameters
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print("Sum:", result)
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Lists and Tuples</h2>
+            <h3>5.1 Lists</h3>
+            <p>Lists are mutable sequences in Python...</p>
+            <pre><code># List example
+my_list = [1, 2, 3, 4, 5]
+print("List:", my_list)
+            </code></pre>
+            <h3>5.2 Tuples</h3>
+            <p>Tuples are immutable sequences...</p>
+            <pre><code># Tuple example
+my_tuple = (1, 2, 3, 4, 5)
+print("Tuple:", my_tuple)
+            </code></pre>
+            <h3>5.3 List Comprehensions</h3>
+            <p>List comprehensions provide a concise way to create lists...</p>
+            <pre><code># List comprehension example
+squares = [x**2 for x in range(10)]
+print("Squares:", squares)
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Dictionaries and Sets</h2>
+            <h3>6.1 Dictionaries</h3>
+            <p>Dictionaries are key-value pairs...</p>
+            <pre><code># Dictionary example
+my_dict = {"name": "Alice", "age": 25}
+print("Dictionary:", my_dict)
+            </code></pre>
+            <h3>6.2 Sets</h3>
+            <p>Sets are unordered collections of unique items...</p>
+            <pre><code># Set example
+my_set = {1, 2, 3, 3, 4}
+print("Set:", my_set)
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: File Handling</h2>
+            <h3>7.1 Reading from Files</h3>
+            <p>How to read data from files...</p>
+            <pre><code># Reading from a file
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print("File Content:", content)
+            </code></pre>
+            <h3>7.2 Writing to Files</h3>
+            <p>How to write data to files...</p>
+            <pre><code># Writing to a file
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!")
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Error Handling</h2>
+            <h3>8.1 Try and Except</h3>
+            <p>Handling exceptions using <code>try</code> and <code>except</code>...</p>
+            <pre><code># Error handling example
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+            </code></pre>
+            <h3>8.2 Finally and Raise</h3>
+            <p>Using <code>finally</code> and <code>raise</code> for more control...</p>
+            <pre><code># Finally example
+try:
+    x = int(input("Enter a number: "))
+finally:
+    print("Execution completed.")
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Modules and Packages</h2>
+            <h3>9.1 Importing Modules</h3>
+            <p>How to import and use modules...</p>
+            <pre><code># Importing a module
+import math
+print("Square root of 16:", math.sqrt(16))
+            </code></pre>
+            <h3>9.2 Creating Packages</h3>
+            <p>Organizing your code into packages...</p>
+            <pre><code># Example of creating a package
+# In directory 'mypackage', create __init__.py and module.py
+# In module.py:
+def greet():
+    return "Hello from mypackage!"
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Object-Oriented Programming</h2>
+            <h3>10.1 Classes and Objects</h3>
+            <p>Introduction to classes and objects...</p>
+            <pre><code># Class example
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return "Woof!"
+
+my_dog = Dog("Buddy")
+print(my_dog.bark())
+            </code></pre>
+            <h3>10.2 Inheritance and Polymorphism</h3>
+            <p>Using inheritance and polymorphism to create complex systems...</p>
+            <pre><code># Inheritance example
+class Animal:
+    def speak(self):
+        return "Animal sound"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow"
+
+my_cat = Cat()
+print(my_cat.speak())
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('toggleBtn').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? '🌚' : '🌞';
+        });
+
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Go Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Variables & Data Types</a></li>
+                <li><a href="#module3">Control Structures</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Arrays & Slices</a></li>
+                <li><a href="#module6">Structs & Interfaces</a></li>
+                <li><a href="#module7">Concurrency</a></li>
+                <li><a href="#module8">Error Handling</a></li>
+                <li><a href="#module9">File I/O</a></li>
+                <li><a href="#module10">Packages & Modules</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Go</h2>
+            <h3>1.1 Overview of Go</h3>
+            <p>Go, also known as Golang, is an open-source programming language developed by Google...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+            </code></pre>
+            <h3>1.2 History of Go</h3>
+            <p>Go was created to improve programming productivity and efficiency...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Variables & Data Types</h2>
+            <h3>2.1 Variables</h3>
+            <p>Variables in Go are declared using the <code>var</code> keyword...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    var age int = 30
+    var height float64 = 5.9
+    var name string = "John"
+
+    fmt.Println("Age:", age)
+    fmt.Println("Height:", height)
+    fmt.Println("Name:", name)
+}
+            </code></pre>
+            <h3>2.2 Data Types</h3>
+            <p>Go supports several basic data types, including <code>int</code>, <code>float64</code>, <code>bool</code>, and <code>string</code>...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    var isTrue bool = true
+    var pi float64 = 3.14159
+
+    fmt.Println("Boolean:", isTrue)
+    fmt.Println("Pi:", pi)
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Structures</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>Go provides conditional statements like <code>if</code> and <code>switch</code>...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    number := 10
+
+    if number%2 == 0 {
+        fmt.Println("The number is even.")
+    } else {
+        fmt.Println("The number is odd.")
+    }
+}
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Go has a single looping construct, the <code>for</code> loop...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    for i := 0; i < 5; i++ {
+        fmt.Println("Iteration", i)
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Function Basics</h3>
+            <p>Functions in Go are declared using the <code>func</code> keyword...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func greet() {
+    fmt.Println("Hello, World!")
+}
+
+func main() {
+    greet()
+}
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func add(a int, b int) int {
+    return a + b
+}
+
+func main() {
+    result := add(5, 3)
+    fmt.Println("Sum:", result)
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Arrays & Slices</h2>
+            <h3>5.1 Arrays</h3>
+            <p>Arrays in Go are fixed-size collections of elements...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    var numbers [5]int = [5]int{1, 2, 3, 4, 5}
+
+    for i, number := range numbers {
+        fmt.Println("Number", i, ":", number)
+    }
+}
+            </code></pre>
+            <h3>5.2 Slices</h3>
+            <p>Slices are more flexible than arrays and are used for dynamic-sized collections...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    var numbers []int = []int{1, 2, 3, 4, 5}
+
+    for i, number := range numbers {
+        fmt.Println("Number", i, ":", number)
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Structs & Interfaces</h2>
+            <h3>6.1 Structs</h3>
+            <p>Structs are used to define custom types with multiple fields...</p>
+            <pre><code>package main
+
+import "fmt"
+
+type Person struct {
+    Name string
+    Age  int
+}
+
+func main() {
+    person := Person{Name: "John", Age: 30}
+    fmt.Println("Name:", person.Name)
+    fmt.Println("Age:", person.Age)
+}
+            </code></pre>
+            <h3>6.2 Interfaces</h3>
+            <p>Interfaces in Go are used to specify methods that a type must implement...</p>
+            <pre><code>package main
+
+import "fmt"
+
+type Greeter interface {
+    Greet() string
+}
+
+type Person struct {
+    Name string
+}
+
+func (p Person) Greet() string {
+    return "Hello, " + p.Name
+}
+
+func main() {
+    var greeter Greeter = Person{Name: "John"}
+    fmt.Println(greeter.Greet())
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Concurrency</h2>
+            <h3>7.1 Goroutines</h3>
+            <p>Goroutines are lightweight threads managed by Go runtime...</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func printNumbers() {
+    for i := 1; i <= 5; i++ {
+        fmt.Println(i)
+        time.Sleep(time.Second)
+    }
+}
+
+func main() {
+    go printNumbers()
+    time.Sleep(6 * time.Second)
+}
+            </code></pre>
+            <h3>7.2 Channels</h3>
+            <p>Channels are used to communicate between goroutines...</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+)
+
+func sendData(ch chan string) {
+    ch <- "Hello from goroutine"
+}
+
+func main() {
+    ch := make(chan string)
+    go sendData(ch)
+    msg := <-ch
+    fmt.Println(msg)
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Error Handling</h2>
+            <h3>8.1 Error Type</h3>
+            <p>Errors in Go are represented using the <code>error</code> type...</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+    "errors"
+)
+
+func divide(a int, b int) (int, error) {
+    if b == 0 {
+        return 0, errors.New("cannot divide by zero")
+    }
+    return a / b, nil
+}
+
+func main() {
+    result, err := divide(10, 0)
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Println("Result:", result)
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: File I/O</h2>
+            <h3>9.1 Reading Files</h3>
+            <p>Go provides the <code>os</code> and <code>io/ioutil</code> packages for file operations...</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+    "io/ioutil"
+)
+
+func main() {
+    data, err := ioutil.ReadFile("example.txt")
+    if err != nil {
+        fmt.Println("Error:", err)
+        return
+    }
+    fmt.Println(string(data))
+}
+            </code></pre>
+            <h3>9.2 Writing Files</h3>
+            <p>Writing to files can be done using the <code>os</code> package...</p>
+            <pre><code>package main
+
+import (
+    "fmt"
+    "os"
+)
+
+func main() {
+    content := []byte("Hello, Go!")
+    err := os.WriteFile("output.txt", content, 0644)
+    if err != nil {
+        fmt.Println("Error:", err)
+    } else {
+        fmt.Println("File written successfully")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Packages & Modules</h2>
+            <h3>10.1 Creating Packages</h3>
+            <p>Packages in Go are a way to group related code...</p>
+            <pre><code>package main
+
+import "fmt"
+
+func PrintMessage() {
+    fmt.Println("Hello from my package!")
+}
+            </code></pre>
+            <h3>10.2 Modules</h3>
+            <p>Modules are a collection of related Go packages...</p>
+            <pre><code>module mymodule
+
+go 1.18
+
+require (
+    example.com/mypackage v1.0.0
+)
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

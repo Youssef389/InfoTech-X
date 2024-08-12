@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        body.dark-mode h3 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Front-end Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Basic Elements</a></li>
+                <li><a href="#module3">Attributes</a></li>
+                <li><a href="#module4">Forms</a></li>
+                <li><a href="#module5">Multimedia</a></li>
+                <li><a href="#module6">Links</a></li>
+                <li><a href="#module7">Tables</a></li>
+                <li><a href="#module8">Semantic Elements</a></li>
+                <li><a href="#module9">HTML5 Features</a></li>
+                <li><a href="#module10">Introduction</a></li>
+                <li><a href="#module11">Selectors & Specificity</a></li>
+                <li><a href="#module12">Box Model</a></li>
+                <li><a href="#module13">Typography</a></li>
+                <li><a href="#module14">Color & Backgrounds</a></li>
+                <li><a href="#module15">Layout Techniques</a></li>
+                <li><a href="#module16">Responsive Design</a></li>
+                <li><a href="#module17">Advanced Features</a></li>
+                <li><a href="#module18">Preprocessors</a></li>
+                <li><a href="#module19">Introduction</a></li>
+                <li><a href="#module20">Components</a></li>
+                <li><a href="#module21">Props & State</a></li>
+                <li><a href="#module22">Lifecycle Methods</a></li>
+                <li><a href="#module23">Hooks</a></li>
+                <li><a href="#module24">Routing</a></li>
+                <li><a href="#module25">Context API</a></li>
+                <li><a href="#module26">Forms</a></li>
+                <li><a href="#module27">Handling Events</a></li>
+                <li><a href="#module28">Advanced Topics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to HTML</h2>
+            <h3>1.1 What is HTML?</h3>
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages...</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to HTML!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic HTML Elements</h2>
+            <h3>2.1 Headings</h3>
+            <p>HTML provides six levels of headings, from &lt;h1&gt; to &lt;h6&gt;...</p>
+            <pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;h2&gt;This is a subheading&lt;/h2&gt;
+&lt;h3&gt;This is a smaller heading&lt;/h3&gt;
+            </code></pre>
+            <h3>2.2 Paragraphs</h3>
+            <p>Paragraphs are defined using the &lt;p&gt; tag...</p>
+            <pre><code>&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: HTML Attributes</h2>
+            <h3>3.1 The `id` Attribute</h3>
+            <p>The `id` attribute specifies a unique identifier for an element...</p>
+            <pre><code>&lt;div id="uniqueElement"&gt;Content&lt;/div&gt;
+            </code></pre>
+            <h3>3.2 The `class` Attribute</h3>
+            <p>The `class` attribute is used to apply CSS styles to multiple elements...</p>
+            <pre><code>&lt;div class="myClass"&gt;Content&lt;/div&gt;
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: HTML Forms</h2>
+            <h3>4.1 Form Elements</h3>
+            <p>Forms are used to collect user input...</p>
+            <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Multimedia Elements</h2>
+            <h3>5.1 Images</h3>
+            <p>Images can be included using the &lt;img&gt; tag...</p>
+            <pre><code>&lt;img src="image.jpg" alt="Description"&gt;
+            </code></pre>
+            <h3>5.2 Videos</h3>
+            <p>Videos can be embedded using the &lt;video&gt; tag...</p>
+            <pre><code>&lt;video width="320" height="240" controls&gt;
+    &lt;source src="movie.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Hyperlinks</h2>
+            <h3>6.1 Creating Links</h3>
+            <p>Links are created using the &lt;a&gt; tag...</p>
+            <pre><code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Tables</h2>
+            <h3>7.1 Basic Table Structure</h3>
+            <p>Tables are created using the &lt;table&gt; tag...</p>
+            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Semantic Elements</h2>
+            <h3>8.1 What Are Semantic Elements?</h3>
+            <p>Semantic elements clearly describe their meaning in a human- and machine-readable way...</p>
+            <pre><code>&lt;header&gt;This is the header&lt;/header&gt;
+&lt;nav&gt;This is the navigation&lt;/nav&gt;
+&lt;section&gt;This is a section&lt;/section&gt;
+&lt;footer&gt;This is the footer&lt;/footer&gt;
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: HTML5 Features</h2>
+            <h3>9.1 New Elements</h3>
+            <p>HTML5 introduces several new elements...</p>
+            <pre><code>&lt;article&gt;This is an article&lt;/article&gt;
+&lt;aside&gt;This is an aside&lt;/aside&gt;
+&lt;details&gt;Details about something&lt;/details&gt;
+&lt;figcaption&gt;A caption for a figure&lt;/figcaption&gt;
+&lt;figure&gt;&lt;img src="image.jpg" alt="Image"&gt;&lt;/figure&gt;
+            </code></pre>
+        </section>
+        <section id="module10">
+            <h2>Module 1: Introduction to CSS</h2>
+            <h3>1.1 What is CSS?</h3>
+            <p>CSS stands for Cascading Style Sheets and is used to style HTML elements...</p>
+            <h3>1.2 CSS Syntax</h3>
+            <pre><code>/* CSS Syntax */
+selector {
+    property: value;
+}
+            </code></pre>
+        </section>
+
+        <section id="module11">
+            <h2>Module 2: Selectors and Specificity</h2>
+            <h3>2.1 Basic Selectors</h3>
+            <p>Selectors are used to target HTML elements...</p>
+            <pre><code>/* Basic Selectors */
+p {
+    color: blue;
+}
+
+#unique-id {
+    color: red;
+}
+
+.class-name {
+    color: green;
+}
+            </code></pre>
+            <h3>2.2 Specificity</h3>
+            <p>Specificity determines which CSS rule applies when multiple rules match an element...</p>
+            <pre><code>/* Specificity */
+#id-selector {
+    color: red; /* Highest specificity */
+}
+
+.class-selector {
+    color: blue; /* Lower specificity */
+}
+
+element {
+    color: green; /* Lowest specificity */
+}
+            </code></pre>
+        </section>
+
+        <section id="module12">
+            <h2>Module 3: Box Model</h2>
+            <h3>3.1 Content, Padding, Border, Margin</h3>
+            <p>The CSS box model describes how elements are sized and spaced...</p>
+            <pre><code>/* Box Model */
+.element {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 20px;
+}
+            </code></pre>
+        </section>
+
+        <section id="module13">
+            <h2>Module 4: Typography</h2>
+            <h3>4.1 Fonts and Font-Families</h3>
+            <p>CSS allows you to define fonts and font sizes...</p>
+            <pre><code>/* Font Properties */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+            </code></pre>
+        </section>
+
+        <section id="module14">
+            <h2>Module 5: Color and Backgrounds</h2>
+            <h3>5.1 Color Properties</h3>
+            <p>CSS provides several ways to define colors...</p>
+            <pre><code>/* Color Properties */
+body {
+    color: #333;
+    background-color: #f4f4f4;
+}
+            </code></pre>
+        </section>
+
+        <section id="module15">
+            <h2>Module 6: Layout Techniques</h2>
+            <h3>6.1 Flexbox Layout</h3>
+            <p>Flexbox provides a one-dimensional layout system...</p>
+            <pre><code>/* Flexbox Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.child {
+    flex: 1;
+}
+            </code></pre>
+        </section>
+
+        <section id="module16">
+            <h2>Module 7: Responsive Design</h2>
+            <h3>7.1 Media Queries</h3>
+            <p>Media queries allow you to apply styles based on the device's characteristics...</p>
+            <pre><code>/* Media Queries */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module17">
+            <h2>Module 8: Advanced CSS Features</h2>
+            <h3>8.1 Transitions and Animations</h3>
+            <p>CSS transitions and animations enable you to create dynamic effects...</p>
+            <pre><code>/* Transitions */
+.element {
+    transition: background-color 0.3s ease;
+}
+.element:hover {
+    background-color: #f00;
+}
+
+/* Animations */
+@keyframes example {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animated-element {
+    animation: example 2s ease-in-out;
+}
+            </code></pre>
+        </section>
+
+        <section id="module18">
+            <h2>Module 9: Preprocessors</h2>
+            <h3>9.1 Introduction to Sass</h3>
+            <p>Sass is a popular CSS preprocessor that adds features like variables and mixins...</p>
+            <pre><code>/* Sass Variables */
+$primary-color: #333;
+
+body {
+    color: $primary-color;
+}
+            </code></pre>
+        </section>
+        <section id="introduction" class="section">
+            <h2>Introduction to Bootstrap</h2>
+            <p>Bootstrap is a popular framework for building responsive and mobile-first websites...</p>
+        </section>
+
+        <section id="setup" class="section">
+            <h2>Bootstrap Setup</h2>
+            <h3>Including Bootstrap via CDN</h3>
+            <pre class="code-example"><code>&lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"&gt;</code></pre>
+            <h3>Installing Bootstrap via npm</h3>
+            <pre class="code-example"><code>npm install bootstrap</code></pre>
+        </section>
+
+        <section id="grid" class="section">
+            <h2>Bootstrap Grid System</h2>
+            <h3>Understanding Containers</h3>
+            <p>Containers are used to align and pad content...</p>
+            <pre class="code-example"><code>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;Column 1&lt;/div&gt;
+        &lt;div class="col"&gt;Column 2&lt;/div&gt;
+        &lt;div class="col"&gt;Column 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section id="typography" class="section">
+            <h2>Bootstrap Typography</h2>
+            <h3>Headings</h3>
+            <p>Bootstrap provides styles for headings...</p>
+            <pre class="code-example"><code>&lt;h1 class="display-1"&gt;Heading 1&lt;/h1&gt;</code></pre>
+        </section>
+
+        <section id="forms" class="section">
+            <h2>Bootstrap Forms</h2>
+            <h3>Form Controls</h3>
+            <p>Forms in Bootstrap are easy to style and customize...</p>
+            <pre class="code-example"><code>&lt;form&gt;
+    &lt;div class="mb-3"&gt;
+        &lt;label for="exampleInput" class="form-label"&gt;Email address&lt;/label&gt;
+        &lt;input type="email" class="form-control" id="exampleInput"&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        </section>
+
+        <section id="buttons" class="section">
+            <h2>Bootstrap Buttons</h2>
+            <h3>Basic Buttons</h3>
+            <p>Bootstrap buttons come in different styles and sizes...</p>
+            <pre class="code-example"><code>&lt;button class="btn btn-primary"&gt;Primary Button&lt;/button&gt;</code></pre>
+        </section>
+
+        <section id="navbars" class="section">
+            <h2>Bootstrap Navbars</h2>
+            <h3>Creating a Navbar</h3>
+            <p>Bootstrap navbars provide a responsive navigation bar...</p>
+            <pre class="code-example"><code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+    &lt;div class="collapse navbar-collapse"&gt;
+        &lt;ul class="navbar-nav"&gt;
+            &lt;li class="nav-item"&gt;
+                &lt;a class="nav-link" href="#"&gt;Home&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+        </section>
+
+        <section id="cards" class="section">
+            <h2>Bootstrap Cards</h2>
+            <h3>Basic Cards</h3>
+            <p>Cards are flexible and extensible content containers...</p>
+            <pre class="code-example"><code>&lt;div class="card" style="width: 18rem;"&gt;
+    &lt;img src="..." class="card-img-top" alt="..."&gt;
+    &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section id="modals" class="section">
+            <h2>Bootstrap Modals</h2>
+            <h3>Basic Modals</h3>
+            <p>Modals are dialogs that overlay the main content...</p>
+            <pre class="code-example"><code>&lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Launch demo modal
+&lt;/button&gt;
+
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                ...
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section id="utilities" class="section">
+            <h2>Bootstrap Utilities</h2>
+            <h3>Spacing</h3>
+            <p>Bootstrap utilities help with margin and padding...</p>
+            <pre class="code-example"><code>&lt;div class="mt-3"&gt;Margin Top&lt;/div&gt;</code></pre>
+        </section>
+
+        <section id="module19">
+            <h2>Module 1: Introduction to React</h2>
+            <h3>1.1 What is React?</h3>
+            <p>React is a JavaScript library for building user interfaces, maintained by Facebook...</p>
+            <pre><code>import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+    return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}
+
+ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));
+            </code></pre>
+            <h3>1.2 Setting Up React</h3>
+            <p>You can set up a React project using Create React App...</p>
+        </section>
+
+        <section id="module20">
+            <h2>Module 2: Components</h2>
+            <h3>2.1 Functional Components</h3>
+            <p>Functional components are simple functions that return React elements...</p>
+            <pre><code>function Welcome(props) {
+    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+export default Welcome;
+            </code></pre>
+            <h3>2.2 Class Components</h3>
+            <p>Class components provide more features such as local state and lifecycle methods...</p>
+            <pre><code>class Welcome extends React.Component {
+    render() {
+        return &lt;h1&gt;Hello, {this.props.name}&lt;/h1&gt;;
+    }
+}
+
+export default Welcome;
+            </code></pre>
+        </section>
+
+        <section id="module21">
+            <h2>Module 3: Props & State</h2>
+            <h3>3.1 Using Props</h3>
+            <p>Props are used to pass data from parent to child components...</p>
+            <pre><code>function Greeting(props) {
+    return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;
+}
+
+export default Greeting;
+            </code></pre>
+            <h3>3.2 Managing State</h3>
+            <p>State allows components to create and manage their own data...</p>
+            <pre><code>class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+    }
+
+    increment = () => {
+        this.setState({ count: this.state.count + 1 });
+    }
+
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;Count: {this.state.count}&lt;/p&gt;
+                &lt;button onClick={this.increment}&gt;Increment&lt;/button&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+
+export default Counter;
+            </code></pre>
+        </section>
+
+        <section id="module22">
+            <h2>Module 4: Lifecycle Methods</h2>
+            <h3>4.1 Mounting</h3>
+            <p>Lifecycle methods are hooks that allow you to run code at specific points in a component's lifecycle...</p>
+            <pre><code>class MyComponent extends React.Component {
+    componentDidMount() {
+        console.log('Component did mount');
+    }
+
+    render() {
+        return &lt;div&gt;My Component&lt;/div&gt;;
+    }
+}
+
+export default MyComponent;
+            </code></pre>
+            <h3>4.2 Updating</h3>
+            <p>Updating methods are used when a component's state or props change...</p>
+            <pre><code>class MyComponent extends React.Component {
+    componentDidUpdate(prevProps, prevState) {
+        console.log('Component did update');
+    }
+
+    render() {
+        return &lt;div&gt;My Component&lt;/div&gt;;
+    }
+}
+
+export default MyComponent;
+            </code></pre>
+        </section>
+
+        <section id="module23">
+            <h2>Module 5: Hooks</h2>
+            <h3>5.1 useState</h3>
+            <p>The useState hook allows functional components to have state...</p>
+            <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+    const [count, setCount] = useState(0);
+
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Count: {count}&lt;/p&gt;
+            &lt;button onClick={() => setCount(count + 1)}&gt;Increment&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default Counter;
+            </code></pre>
+            <h3>5.2 useEffect</h3>
+            <p>The useEffect hook allows you to perform side effects in your components...</p>
+            <pre><code>import React, { useEffect, useState } from 'react';
+
+function FetchData() {
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch('https://api.example.com/data')
+            .then(response => response.json())
+            .then(data => setData(data));
+    }, []);
+
+    return (
+        &lt;div&gt;
+            &lt;pre&gt;{JSON.stringify(data, null, 2)}&lt;/pre&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default FetchData;
+            </code></pre>
+        </section>
+
+        <section id="module24">
+            <h2>Module 6: Routing</h2>
+            <h3>6.1 Setting Up React Router</h3>
+            <p>React Router is a library for routing in React applications...</p>
+            <pre><code>import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
+function App() {
+    return (
+        &lt;Router&gt;
+            &lt;Switch&gt;
+                &lt;Route path="/" exact component={Home} /&gt;
+                &lt;Route path="/about" component={About} /&gt;
+            &lt;/Switch&gt;
+        &lt;/Router&gt;
+    );
+}
+
+export default App;
+            </code></pre>
+            <h3>6.2 Route Parameters</h3>
+            <p>Route parameters can be used to pass data through the URL...</p>
+            <pre><code>import { useParams } from 'react-router-dom';
+
+function User() {
+    const { id } = useParams();
+    return &lt;div&gt;User ID: {id}&lt;/div&gt;;
+}
+
+export default User;
+            </code></pre>
+        </section>
+
+        <section id="module25">
+            <h2>Module 7: Context API</h2>
+            <h3>7.1 Creating a Context</h3>
+            <p>The Context API is used to manage global state...</p>
+            <pre><code>import React, { createContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+function ThemeProvider({ children }) {
+    const [theme, setTheme] = useState('light');
+
+    return (
+        &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+            {children}
+        &lt;/ThemeContext.Provider&gt;
+    );
+}
+
+export { ThemeContext, ThemeProvider };
+            </code></pre>
+            <h3>7.2 Using Context</h3>
+            <p>You can use the useContext hook to access context values...</p>
+            <pre><code>import React, { useContext } from 'react';
+import { ThemeContext } from './ThemeProvider';
+
+function ThemedComponent() {
+    const { theme, setTheme } = useContext(ThemeContext);
+
+    return (
+        &lt;div style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff' }}&gt;
+            &lt;p&gt;Current theme: {theme}&lt;/p&gt;
+            &lt;button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}&gt;Toggle Theme&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default ThemedComponent;
+            </code></pre>
+        </section>
+
+        <section id="module26">
+            <h2>Module 8: Forms</h2>
+            <h3>8.1 Controlled Components</h3>
+            <p>Controlled components are form elements whose values are controlled by React state...</p>
+            <pre><code>import React, { useState } from 'react';
+
+function Form() {
+    const [name, setName] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Submitted name:', name);
+    };
+
+    return (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;label&gt;Name:
+                &lt;input type="text" value={name} onChange={(e) => setName(e.target.value)} /&gt;
+            &lt;/label&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    );
+}
+
+export default Form;
+            </code></pre>
+            <h3>8.2 Uncontrolled Components</h3>
+            <p>Uncontrolled components manage their own state internally...</p>
+            <pre><code>import React, { useRef } from 'react';
+
+function Form() {
+    const inputRef = useRef(null);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Submitted name:', inputRef.current.value);
+    };
+
+    return (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;label&gt;Name:
+                &lt;input type="text" ref={inputRef} /&gt;
+            &lt;/label&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    );
+}
+
+export default Form;
+            </code></pre>
+        </section>
+
+        <section id="module27">
+            <h2>Module 9: Handling Events</h2>
+            <h3>9.1 Event Handling</h3>
+            <p>Event handling in React is similar to handling events in the DOM...</p>
+            <pre><code>function Button() {
+    const handleClick = () => {
+        alert('Button clicked!');
+    };
+
+    return &lt;button onClick={handleClick}&gt;Click Me&lt;/button&gt;;
+}
+
+export default Button;
+            </code></pre>
+            <h3>9.2 Synthetic Events</h3>
+            <p>React provides a SyntheticEvent wrapper around the native events...</p>
+            <pre><code>function Form() {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted');
+    };
+
+    return (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+        &lt;/form&gt;
+    );
+}
+
+export default Form;
+            </code></pre>
+        </section>
+
+        <section id="module28">
+            <h2>Module 10: Advanced Topics</h2>
+            <h3>10.1 Performance Optimization</h3>
+            <p>React provides various techniques to optimize the performance of your application...</p>
+            <pre><code>import React, { memo } from 'react';
+
+const ExpensiveComponent = memo((props) => {
+    // expensive rendering logic
+    return &lt;div&gt;Expensive Component&lt;/div&gt;;
+});
+
+export default ExpensiveComponent;
+            </code></pre>
+            <h3>10.2 Server-Side Rendering (SSR)</h3>
+            <p>Server-Side Rendering can be used to render React components on the server before sending them to the client...</p>
+            <pre><code>import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import App from './App';
+
+const html = ReactDOMServer.renderToString(&lt;App /&gt;);
+console.log(html);
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script> 
+</body>
+</html>

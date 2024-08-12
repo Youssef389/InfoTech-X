@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>System Design Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Design Principles</a></li>
+                <li><a href="#module3">Architecture Patterns</a></li>
+                <li><a href="#module4">Scalability</a></li>
+                <li><a href="#module5">Reliability</a></li>
+                <li><a href="#module6">Performance</a></li>
+                <li><a href="#module7">Data Management</a></li>
+                <li><a href="#module8">Microservices</a></li>
+                <li><a href="#module9">Security</a></li>
+                <li><a href="#module10">Case Studies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to System Design</h2>
+            <h3>1.1 What is System Design?</h3>
+            <p>System design encompasses the planning and creation of systems that meet specific requirements, ensuring efficiency, scalability, and robustness. It involves understanding both the high-level architecture and the detailed components that make up a system.</p>
+            <h3>1.2 Importance of System Design</h3>
+            <p>Effective system design is crucial for developing systems that are reliable, scalable, and maintainable. It helps in minimizing risks, managing complexity, and ensuring that the system can adapt to future changes and demands.</p>
+            <pre><code>public class SystemDesignIntro {
+    public static void main(String[] args) {
+        System.out.println("Welcome to System Design Course");
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Design Principles</h2>
+            <h3>2.1 Key Design Principles</h3>
+            <p>Key principles of system design include:</p>
+            <ul>
+                <li><strong>Simplicity:</strong> Keeping the design as simple as possible while meeting all requirements.</li>
+                <li><strong>Modularity:</strong> Dividing the system into smaller, manageable modules that can be developed and tested independently.</li>
+                <li><strong>Scalability:</strong> Designing the system to handle increased load by adding resources or components.</li>
+                <li><strong>Maintainability:</strong> Ensuring the system can be easily updated and maintained over time.</li>
+            </ul>
+            <pre><code>public class DesignPrinciples {
+    public void applyPrinciples() {
+        // Code to apply design principles
+    }
+}
+            </code></pre>
+            <h3>2.2 Best Practices</h3>
+            <p>Best practices for system design include:</p>
+            <ul>
+                <li><strong>Use Design Patterns:</strong> Employ established design patterns to solve common problems.</li>
+                <li><strong>Document the Design:</strong> Maintain comprehensive documentation to aid understanding and future maintenance.</li>
+                <li><strong>Perform Code Reviews:</strong> Regularly review code to ensure adherence to design principles and best practices.</li>
+            </ul>
+            <pre><code>public class BestPractices {
+    public void useDesignPatterns() {
+        // Code to implement design patterns
+    }
+    
+    public void documentDesign() {
+        // Code to document system design
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Architecture Patterns</h2>
+            <h3>3.1 Common Architecture Patterns</h3>
+            <p>Architecture patterns are reusable solutions to common problems in system design. Some common patterns include:</p>
+            <ul>
+                <li><strong>Model-View-Controller (MVC):</strong> Separates the system into three interconnected components: Model, View, and Controller.</li>
+                <li><strong>Microservices:</strong> Structures the system as a collection of loosely coupled services that communicate through APIs.</li>
+                <li><strong>Event-Driven Architecture:</strong> Uses events to trigger and communicate between decoupled services.</li>
+            </ul>
+            <pre><code>public class ArchitecturePatterns {
+    public void useMVC() {
+        // Code to implement MVC pattern
+    }
+    
+    public void useMicroservices() {
+        // Code to implement Microservices pattern
+    }
+    
+    public void useEventDriven() {
+        // Code to implement Event-Driven pattern
+    }
+}
+            </code></pre>
+            <h3>3.2 Choosing the Right Pattern</h3>
+            <p>Selecting the appropriate architecture pattern depends on factors such as the complexity of the system, scalability requirements, and team expertise. Evaluate each pattern's strengths and weaknesses in relation to the project needs.</p>
+            <pre><code>public class ChoosePattern {
+    public void selectPattern(String pattern) {
+        // Code to choose the right architecture pattern
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Scalability</h2>
+            <h3>4.1 Scaling Strategies</h3>
+            <p>Scalability is the capacity of a system to handle increased load by adding resources. Common strategies include:</p>
+            <ul>
+                <li><strong>Vertical Scaling:</strong> Enhancing a single server with more power, such as CPU or RAM.</li>
+                <li><strong>Horizontal Scaling:</strong> Adding more servers to distribute the load.</li>
+                <li><strong>Load Balancing:</strong> Distributing incoming traffic among multiple servers to avoid overloading any single server.</li>
+            </ul>
+            <pre><code>public class ScalingStrategies {
+    public void distributeLoad(Request request) {
+        // Code to distribute requests among servers
+    }
+    
+    public void scaleVertically() {
+        // Code to add resources to a single server
+    }
+    
+    public void scaleHorizontally() {
+        // Code to add more servers
+    }
+}
+            </code></pre>
+            <h3>4.2 Handling Load</h3>
+            <p>Handling load effectively involves monitoring performance metrics, implementing caching strategies, and optimizing code and database queries. Use monitoring tools to track performance and identify bottlenecks.</p>
+            <pre><code>public class LoadHandling {
+    public void monitorPerformance() {
+        // Code to monitor system performance
+    }
+    
+    public void implementCaching() {
+        // Code to implement caching strategies
+    }
+    
+    public void optimizeCode() {
+        // Code to optimize application code
+    }
+    
+    public void optimizeQueries() {
+        // Code to optimize database queries
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Reliability</h2>
+            <h3>5.1 Ensuring Reliability</h3>
+            <p>Reliability refers to a system's ability to consistently perform its intended functions. Key techniques for ensuring reliability include:</p>
+            <ul>
+                <li><strong>Redundancy:</strong> Implementing duplicate systems and components to prevent single points of failure.</li>
+                <li><strong>Fault Tolerance:</strong> Designing the system to continue operating even if certain components fail.</li>
+                <li><strong>Disaster Recovery:</strong> Developing plans and procedures to recover from catastrophic failures and data loss.</li>
+            </ul>
+            <pre><code>public class Reliability {
+    public void ensureRedundancy() {
+        // Code to implement system redundancy
+    }
+    
+    public void implementFaultTolerance() {
+        // Code to design fault-tolerant systems
+    }
+    
+    public void developDisasterRecoveryPlan() {
+        // Code to create a disaster recovery plan
+    }
+}
+            </code></pre>
+            <h3>5.2 Testing for Reliability</h3>
+            <p>Reliability testing involves stress testing, fault injection, and simulating failure scenarios to ensure the system behaves as expected under adverse conditions. Regular testing helps identify and address potential reliability issues.</p>
+            <pre><code>public class ReliabilityTesting {
+    public void stressTestSystem() {
+        // Code to perform stress testing
+    }
+    
+    public void injectFaults() {
+        // Code to simulate failures
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Performance</h2>
+            <h3>6.1 Performance Optimization</h3>
+            <p>Optimizing performance involves enhancing system speed, responsiveness, and resource usage. Key areas to focus on include:</p>
+            <ul>
+                <li><strong>Code Optimization:</strong> Improving code efficiency and reducing execution time.</li>
+                <li><strong>Database Optimization:</strong> Tuning queries, indexing, and optimizing database schema.</li>
+                <li><strong>Caching:</strong> Implementing caching mechanisms to reduce load times and improve response times.</li>
+            </ul>
+            <pre><code>public class PerformanceOptimization {
+    public void optimizeCode() {
+        // Code to optimize application code
+    }
+    
+    public void optimizeDatabase() {
+        // Code to optimize database performance
+    }
+    
+    public void implementCaching() {
+        // Code to implement caching strategies
+    }
+}
+            </code></pre>
+            <h3>6.2 Performance Testing</h3>
+            <p>Performance testing involves evaluating how the system performs under various conditions, such as high load or concurrent users. Techniques include load testing, stress testing, and profiling to identify performance bottlenecks and areas for improvement.</p>
+            <pre><code>public class PerformanceTesting {
+    public void loadTestSystem() {
+        // Code to perform load testing
+    }
+    
+    public void stressTestSystem() {
+        // Code to perform stress testing
+    }
+    
+    public void profileSystem() {
+        // Code to profile system performance
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Data Management</h2>
+            <h3>7.1 Data Storage Solutions</h3>
+            <p>Effective data management involves choosing appropriate data storage solutions based on the needs of the system. Considerations include:</p>
+            <ul>
+                <li><strong>Relational Databases:</strong> Suitable for structured data and complex queries (e.g., MySQL, PostgreSQL).</li>
+                <li><strong>NoSQL Databases:</strong> Suitable for unstructured or semi-structured data and high scalability (e.g., MongoDB, Cassandra).</li>
+                <li><strong>In-Memory Databases:</strong> Provide fast access to data by storing it in memory (e.g., Redis, Memcached).</li>
+            </ul>
+            <pre><code>public class DataManagement {
+    public void chooseDatabase(String type) {
+        // Code to select an appropriate database
+    }
+    
+    public void manageData(String data) {
+        // Code to manage data storage and retrieval
+    }
+}
+            </code></pre>
+            <h3>7.2 Data Processing Techniques</h3>
+            <p>Data processing involves transforming raw data into useful information. Techniques include:</p>
+            <ul>
+                <li><strong>Data Aggregation:</strong> Summarizing data to provide insights.</li>
+                <li><strong>Data Transformation:</strong> Converting data into a suitable format for analysis.</li>
+                <li><strong>Data Cleaning:</strong> Removing or correcting errors and inconsistencies in the data.</li>
+            </ul>
+            <pre><code>public class DataProcessing {
+    public void aggregateData(String data) {
+        // Code to aggregate data
+    }
+    
+    public void transformData(String data) {
+        // Code to transform data
+    }
+    
+    public void cleanData(String data) {
+        // Code to clean data
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Microservices</h2>
+            <h3>8.1 Microservices Architecture</h3>
+            <p>Microservices architecture divides a system into small, independent services that communicate over a network. Benefits include:</p>
+            <ul>
+                <li><strong>Scalability:</strong> Each service can be scaled independently based on its needs.</li>
+                <li><strong>Flexibility:</strong> Services can be developed, deployed, and updated independently.</li>
+                <li><strong>Resilience:</strong> Failure in one service does not necessarily impact others.</li>
+            </ul>
+            <pre><code>public class Microservices {
+    public void defineService(String serviceName) {
+        // Code to define a microservice
+    }
+    
+    public void manageServices() {
+        // Code to manage microservices
+    }
+}
+            </code></pre>
+            <h3>8.2 Managing Microservices</h3>
+            <p>Managing microservices involves orchestrating service interactions, handling data consistency, and monitoring service performance. Use tools like Kubernetes for orchestration and service meshes for communication management.</p>
+            <pre><code>public class MicroservicesManagement {
+    public void orchestrateServices() {
+        // Code to orchestrate microservices
+    }
+    
+    public void handleDataConsistency() {
+        // Code to manage data consistency across services
+    }
+    
+    public void monitorPerformance() {
+        // Code to monitor microservice performance
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Security</h2>
+            <h3>9.1 Security Principles</h3>
+            <p>Security principles ensure that systems are protected from unauthorized access and threats. Key principles include:</p>
+            <ul>
+                <li><strong>Confidentiality:</strong> Ensuring that data is accessible only to authorized users.</li>
+                <li><strong>Integrity:</strong> Ensuring that data is accurate and unaltered.</li>
+                <li><strong>Availability:</strong> Ensuring that systems are accessible and operational when needed.</li>
+            </ul>
+            <pre><code>public class SecurityPrinciples {
+    public void ensureConfidentiality() {
+        // Code to ensure data confidentiality
+    }
+    
+    public void ensureIntegrity() {
+        // Code to ensure data integrity
+    }
+    
+    public void ensureAvailability() {
+        // Code to ensure system availability
+    }
+}
+            </code></pre>
+            <h3>9.2 Common Threats and Mitigations</h3>
+            <p>Common security threats include:</p>
+            <ul>
+                <li><strong>SQL Injection:</strong> Attacks that exploit vulnerabilities in database queries.</li>
+                <li><strong>Cross-Site Scripting (XSS):</strong> Attacks that inject malicious scripts into web pages.</li>
+                <li><strong>Denial of Service (DoS):</strong> Attacks that overwhelm a system with traffic to disrupt service.</li>
+            </ul>
+            <p>Mitigation strategies include:</p>
+            <ul>
+                <li><strong>Input Validation:</strong> Validating and sanitizing user inputs to prevent attacks.</li>
+                <li><strong>Authentication and Authorization:</strong> Implementing strong authentication and access control mechanisms.</li>
+                <li><strong>Regular Updates:</strong> Keeping software and systems up-to-date with security patches.</li>
+            </ul>
+            <pre><code>public class SecurityThreats {
+    public void protectAgainstSQLInjection() {
+        // Code to prevent SQL injection attacks
+    }
+    
+    public void protectAgainstXSS() {
+        // Code to prevent XSS attacks
+    }
+    
+    public void protectAgainstDoS() {
+        // Code to mitigate DoS attacks
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Case Studies</h2>
+            <h3>10.1 Real-World Examples</h3>
+            <p>Analyzing real-world case studies helps understand the practical application of system design principles. Examples include:</p>
+            <ul>
+                <li><strong>Case Study 1:</strong> Analyzing the architecture and scalability of a popular social media platform.</li>
+                <li><strong>Case Study 2:</strong> Examining the reliability and fault tolerance strategies of a financial services system.</li>
+                <li><strong>Case Study 3:</strong> Reviewing the performance optimization techniques used by an e-commerce website.</li>
+            </ul>
+            <pre><code>public class CaseStudies {
+    public void analyzeCaseStudy(String caseStudy) {
+        // Code to analyze a specific case study
+    }
+    
+    public void applyLessons() {
+        // Code to apply lessons from case studies
+    }
+}
+            </code></pre>
+            <h3>10.2 Lessons Learned</h3>
+            <p>From case studies, we learn valuable lessons about what worked well and what could be improved. Apply these lessons to enhance your own system design practices and avoid common pitfalls.</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

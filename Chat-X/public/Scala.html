@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scala Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Scala Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Basic Syntax</a></li>
+                <li><a href="#module3">Data Types</a></li>
+                <li><a href="#module4">Control Structures</a></li>
+                <li><a href="#module5">Functions</a></li>
+                <li><a href="#module6">Collections</a></li>
+                <li><a href="#module7">Object-Oriented Programming</a></li>
+                <li><a href="#module8">Pattern Matching</a></li>
+                <li><a href="#module9">File I/O</a></li>
+                <li><a href="#module10">Concurrency</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Scala</h2>
+            <h3>1.1 Overview of Scala</h3>
+            <p>Scala is a high-level programming language that combines object-oriented and functional programming principles...</p>
+            <pre><code>object HelloWorld {
+    def main(args: Array[String]): Unit = {
+        println("Hello, World!")
+    }
+}
+            </code></pre>
+            <h3>1.2 History of Scala</h3>
+            <p>Scala was created by Martin Odersky and first released in 2003. It is designed to be concise, elegant, and type-safe...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic Syntax</h2>
+            <h3>2.1 Variables and Data Types</h3>
+            <p>Scala uses both mutable and immutable variables. The <code>val</code> keyword defines an immutable variable, while <code>var</code> defines a mutable one...</p>
+            <pre><code>object BasicSyntax {
+    def main(args: Array[String]): Unit = {
+        val name: String = "John Doe"
+        var age: Int = 30
+
+        println(s"Name: $name")
+        println(s"Age: $age")
+    }
+}
+            </code></pre>
+            <h3>2.2 Expressions and Statements</h3>
+            <p>Expressions in Scala produce a value, while statements perform an action...</p>
+            <pre><code>object Expressions {
+    def main(args: Array[String]): Unit = {
+        val sum = 5 + 10
+        println(s"Sum: $sum")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Data Types</h2>
+            <h3>3.1 Primitive Data Types</h3>
+            <p>Scala has several built-in data types such as <code>Int</code>, <code>Double</code>, <code>Boolean</code>, and <code>Char</code>...</p>
+            <pre><code>object DataTypes {
+    def main(args: Array[String]): Unit = {
+        val intValue: Int = 42
+        val doubleValue: Double = 3.14
+        val boolValue: Boolean = true
+        val charValue: Char = 'A'
+
+        println(s"Int: $intValue, Double: $doubleValue, Boolean: $boolValue, Char: $charValue")
+    }
+}
+            </code></pre>
+            <h3>3.2 String Handling</h3>
+            <p>Strings in Scala are immutable and offer various methods for manipulation...</p>
+            <pre><code>object StringHandling {
+    def main(args: Array[String]): Unit = {
+        val str = "Hello, Scala!"
+        println(s"Length of the string: ${str.length}")
+        println(s"Substring: ${str.substring(7)}")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Control Structures</h2>
+            <h3>4.1 Conditional Statements</h3>
+            <p>Scala provides <code>if</code> and <code>match</code> expressions for conditional logic...</p>
+            <pre><code>object ConditionalStatements {
+    def main(args: Array[String]): Unit = {
+        val number = 10
+        val result = if (number % 2 == 0) "Even" else "Odd"
+        println(s"Number is: $result")
+    }
+}
+            </code></pre>
+            <h3>4.2 Loops</h3>
+            <p>Scala offers <code>for</code>, <code>while</code>, and <code>do-while</code> loops...</p>
+            <pre><code>object Loops {
+    def main(args: Array[String]): Unit = {
+        for (i <- 1 to 5) {
+            println(s"For loop iteration $i")
+        }
+
+        var j = 1
+        while (j <= 5) {
+            println(s"While loop iteration $j")
+            j += 1
+        }
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Functions</h2>
+            <h3>5.1 Defining Functions</h3>
+            <p>Functions in Scala can be defined using the <code>def</code> keyword...</p>
+            <pre><code>object Functions {
+    def greet(name: String): String = {
+        s"Hello, $name!"
+    }
+
+    def main(args: Array[String]): Unit = {
+        println(greet("Scala"))
+    }
+}
+            </code></pre>
+            <h3>5.2 Higher-Order Functions</h3>
+            <p>Scala supports higher-order functions, which can take other functions as parameters...</p>
+            <pre><code>object HigherOrderFunctions {
+    def applyFunction(f: Int => Int, x: Int): Int = f(x)
+
+    def main(args: Array[String]): Unit = {
+        val result = applyFunction(x => x * x, 5)
+        println(s"Result: $result")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Collections</h2>
+            <h3>6.1 Lists</h3>
+            <p>Lists in Scala are immutable and ordered collections of elements...</p>
+            <pre><code>object Lists {
+    def main(args: Array[String]): Unit = {
+        val list = List(1, 2, 3, 4, 5)
+        println(s"List: $list")
+        println(s"Head: ${list.head}, Tail: ${list.tail}")
+    }
+}
+            </code></pre>
+            <h3>6.2 Maps</h3>
+            <p>Maps are collections of key-value pairs...</p>
+            <pre><code>object Maps {
+    def main(args: Array[String]): Unit = {
+        val map = Map("a" -> 1, "b" -> 2, "c" -> 3)
+        println(s"Map: $map")
+        println(s"Value for key 'b': ${map("b")}")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Object-Oriented Programming</h2>
+            <h3>7.1 Classes and Objects</h3>
+            <p>Scala is a fully object-oriented language where everything is an object...</p>
+            <pre><code>class Person(val name: String, val age: Int) {
+    def greet(): String = s"Hello, my name is $name and I am $age years old."
+}
+
+object Main {
+    def main(args: Array[String]): Unit = {
+        val person = new Person("John", 30)
+        println(person.greet())
+    }
+}
+            </code></pre>
+            <h3>7.2 Inheritance</h3>
+            <p>Inheritance in Scala allows for the creation of new classes based on existing ones...</p>
+            <pre><code>class Animal {
+    def speak(): String = "Animal sound"
+}
+
+class Dog extends Animal {
+    override def speak(): String = "Woof!"
+}
+
+object Main {
+    def main(args: Array[String]): Unit = {
+        val dog = new Dog
+        println(dog.speak())
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Pattern Matching</h2>
+            <h3>8.1 Basic Pattern Matching</h3>
+            <p>Pattern matching is a powerful feature in Scala...</p>
+            <pre><code>object PatternMatching {
+    def matchTest(x: Any): String = x match {
+        case 1 => "One"
+        case "hello" => "Hello"
+        case _ => "Something else"
+    }
+
+    def main(args: Array[String]): Unit = {
+        println(matchTest(1))
+        println(matchTest("hello"))
+        println(matchTest(3.14))
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: File I/O</h2>
+            <h3>9.1 Reading Files</h3>
+            <p>Scala can handle file I/O using the <code>scala.io.Source</code> class...</p>
+            <pre><code>import scala.io.Source
+
+object FileIO {
+    def main(args: Array[String]): Unit = {
+        val filename = "example.txt"
+        val source = Source.fromFile(filename)
+        for (line <- source.getLines()) {
+            println(line)
+        }
+        source.close()
+    }
+}
+            </code></pre>
+            <h3>9.2 Writing Files</h3>
+            <p>Writing to files is also straightforward in Scala...</p>
+            <pre><code>import java.io.PrintWriter
+
+object FileWrite {
+    def main(args: Array[String]): Unit = {
+        val writer = new PrintWriter("output.txt")
+        writer.write("Hello, Scala!")
+        writer.close()
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Concurrency</h2>
+            <h3>10.1 Threads</h3>
+            <p>Scala supports concurrency using threads...</p>
+            <pre><code>object Concurrency {
+    def main(args: Array[String]): Unit = {
+        val thread = new Thread(new Runnable {
+            def run(): Unit = {
+                println("Running in a thread")
+            }
+        })
+        thread.start()
+        thread.join()
+    }
+}
+            </code></pre>
+            <h3>10.2 Futures</h3>
+            <p>Futures provide a way to perform asynchronous operations...</p>
+            <pre><code>import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+
+object FuturesExample {
+    def main(args: Array[String]): Unit = {
+        val future = Future {
+            Thread.sleep(1000)
+            "Hello from Future"
+        }
+
+        future.onComplete {
+            case Success(value) => println(value)
+            case Failure(exception) => println(s"Error: $exception")
+        }
+    }
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-end Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Back-end Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">NodeJS Basics</a></li>
+                <li><a href="#module3">Modules & Packages</a></li>
+                <li><a href="#module4">Express.js</a></li>
+                <li><a href="#module5">Asynchronous Programming</a></li>
+                <li><a href="#module6">File System</a></li>
+                <li><a href="#module7">Databases</a></li>
+                <li><a href="#module8">Error Handling</a></li>
+                <li><a href="#module9">Testing</a></li>
+                <li><a href="#module10">Deployment</a></li>
+                <li><a href="#module11">Introduction</a></li>
+                <li><a href="#module12">Installation & Setup</a></li>
+                <li><a href="#module13">Basic SQL Commands</a></li>
+                <li><a href="#module14">Advanced Queries</a></li>
+                <li><a href="#module15">Indexes & Performance</a></li>
+                <li><a href="#module16">Transactions & Concurrency</a></li>
+                <li><a href="#module17">Stored Procedures & Functions</a></li>
+                <li><a href="#module18">Backup & Restore</a></li>
+                <li><a href="#module19">Security</a></li>
+                <li><a href="#module20">Data Types & Schema Design</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to NodeJS</h2>
+            <h3>1.1 Overview of NodeJS</h3>
+            <p>NodeJS is a JavaScript runtime built on Chrome's V8 engine that allows you to build scalable network applications...</p>
+            <pre><code>console.log('Hello, NodeJS!');</code></pre>
+            <h3>1.2 Setting Up NodeJS</h3>
+            <p>To start with NodeJS, you need to install it from the official website...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: NodeJS Basics</h2>
+            <h3>2.1 NodeJS Architecture</h3>
+            <p>NodeJS uses a non-blocking, event-driven architecture that makes it ideal for building real-time applications...</p>
+            <pre><code>const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, NodeJS World!\n');
+});
+
+server.listen(3000, '127.0.0.1', () => {
+    console.log('Server running at http://127.0.0.1:3000/');
+});
+            </code></pre>
+            <h3>2.2 NPM (Node Package Manager)</h3>
+            <p>NPM is the default package manager for NodeJS and is used to manage dependencies...</p>
+            <pre><code>npm init -y
+npm install express
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Modules & Packages</h2>
+            <h3>3.1 Creating and Using Modules</h3>
+            <p>Modules in NodeJS allow you to break up your application into smaller, reusable pieces...</p>
+            <pre><code>// myModule.js
+module.exports = function greet(name) {
+    return `Hello, ${name}!`;
+};
+
+// main.js
+const greet = require('./myModule');
+console.log(greet('NodeJS'));
+            </code></pre>
+            <h3>3.2 Using External Packages</h3>
+            <p>NodeJS has a large ecosystem of packages that can be used to add functionality to your application...</p>
+            <pre><code>const lodash = require('lodash');
+console.log(lodash.random(1, 100));
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Express.js</h2>
+            <h3>4.1 Introduction to Express.js</h3>
+            <p>Express.js is a minimal and flexible NodeJS web application framework that provides a robust set of features...</p>
+            <pre><code>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello, Express!');
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+            </code></pre>
+            <h3>4.2 Routing and Middleware</h3>
+            <p>Express.js uses routing to handle different requests and middleware to perform operations on those requests...</p>
+            <pre><code>app.use(express.json());
+
+app.post('/data', (req, res) => {
+    res.send(`Received data: ${JSON.stringify(req.body)}`);
+});
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Asynchronous Programming</h2>
+            <h3>5.1 Callbacks</h3>
+            <p>Callbacks are functions passed as arguments to other functions, executed after the completion of some operations...</p>
+            <pre><code>const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+            </code></pre>
+            <h3>5.2 Promises</h3>
+            <p>Promises provide a more powerful way to handle asynchronous operations...</p>
+            <pre><code>const fs = require('fs').promises;
+
+fs.readFile('example.txt', 'utf8')
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+            </code></pre>
+            <h3>5.3 Async/Await</h3>
+            <p>Async/await is syntactic sugar on top of promises that makes asynchronous code easier to write and read...</p>
+            <pre><code>async function readFile() {
+    try {
+        const data = await fs.readFile('example.txt', 'utf8');
+        console.log(data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+readFile();
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: File System</h2>
+            <h3>6.1 Reading and Writing Files</h3>
+            <p>NodeJS provides a file system module to interact with files...</p>
+            <pre><code>const fs = require('fs');
+
+fs.writeFile('example.txt', 'Hello, File System!', err => {
+    if (err) throw err;
+    console.log('File has been written');
+});
+            </code></pre>
+            <h3>6.2 Working with Directories</h3>
+            <p>In addition to files, you can also manage directories...</p>
+            <pre><code>const fs = require('fs');
+
+fs.mkdir('newDirectory', err => {
+    if (err) throw err;
+    console.log('Directory created');
+});
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Databases</h2>
+            <h3>7.1 Introduction to Databases</h3>
+            <p>NodeJS can interact with various databases, including SQL and NoSQL...</p>
+            <h3>7.2 Using MongoDB</h3>
+            <p>MongoDB is a popular NoSQL database that pairs well with NodeJS...</p>
+            <pre><code>const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+    name: String,
+    age: Number
+});
+
+const User = mongoose.model('User', userSchema);
+
+const newUser = new User({ name: 'John', age: 30 });
+newUser.save().then(() => console.log('User saved'));
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Error Handling</h2>
+            <h3>8.1 Error Handling in Callbacks</h3>
+            <p>Handling errors in asynchronous operations is crucial for robustness...</p>
+            <pre><code>fs.readFile('nonexistent.txt', 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading file:', err);
+        return;
+    }
+    console.log(data);
+});
+            </code></pre>
+            <h3>8.2 Error Handling in Promises</h3>
+            <p>Promises allow you to handle errors using `.catch()`...</p>
+            <pre><code>fs.readFile('nonexistent.txt', 'utf8')
+    .then(data => console.log(data))
+    .catch(err => console.error('Error reading file:', err));
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Testing</h2>
+            <h3>9.1 Introduction to Testing</h3>
+            <p>Testing ensures that your application works as expected...</p>
+            <h3>9.2 Using Mocha and Chai</h3>
+            <p>Mocha and Chai are popular testing frameworks for NodeJS...</p>
+            <pre><code>const assert = require('chai').assert;
+
+describe('Array', function() {
+    describe('#indexOf()', function() {
+        it('should return -1 when the value is not present', function() {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+});
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Deployment</h2>
+            <h3>10.1 Preparing for Deployment</h3>
+            <p>Before deploying, ensure your application is production-ready...</p>
+            <h3>10.2 Deploying with Heroku</h3>
+            <p>Heroku is a cloud platform that simplifies the deployment of NodeJS applications...</p>
+            <pre><code>git init
+heroku create
+git add .
+git commit -m 'Initial commit'
+git push heroku master
+            </code></pre>
+        </section>
+        <section id="module11">
+            <h2>Module 1: Introduction to PostgreSQL</h2>
+            <h3>1.1 What is PostgreSQL?</h3>
+            <p>PostgreSQL is an open-source, object-relational database management system (ORDBMS) known for its strong adherence to SQL standards...</p>
+            <pre><code>-- Connect to PostgreSQL
+psql -U username -d database_name
+            </code></pre>
+            <h3>1.2 PostgreSQL Architecture</h3>
+            <p>PostgreSQL uses a client-server architecture where the server handles database management, and clients interact with the server...</p>
+        </section>
+
+        <section id="module12">
+            <h2>Module 2: Installation & Setup</h2>
+            <h3>2.1 Installing PostgreSQL</h3>
+            <p>PostgreSQL can be installed on various operating systems including Windows, macOS, and Linux...</p>
+            <pre><code># On Ubuntu
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# On macOS using Homebrew
+brew install postgresql
+            </code></pre>
+            <h3>2.2 Basic Configuration</h3>
+            <p>Configure PostgreSQL settings such as authentication methods and connection settings...</p>
+            <pre><code># Edit the configuration file
+sudo nano /etc/postgresql/12/main/postgresql.conf
+            </code></pre>
+        </section>
+
+        <section id="module13">
+            <h2>Module 3: Basic SQL Commands</h2>
+            <h3>3.1 Creating Databases and Tables</h3>
+            <p>Learn how to create databases and tables using SQL commands...</p>
+            <pre><code>-- Create a database
+CREATE DATABASE mydb;
+
+-- Create a table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE
+);
+            </code></pre>
+            <h3>3.2 Inserting and Querying Data</h3>
+            <p>Inserting data into tables and querying data using SELECT...</p>
+            <pre><code>-- Insert data
+INSERT INTO users (name, email) VALUES ('Alice', 'alice@example.com');
+
+-- Query data
+SELECT * FROM users;
+            </code></pre>
+        </section>
+
+        <section id="module14">
+            <h2>Module 4: Advanced Queries</h2>
+            <h3>4.1 Joins</h3>
+            <p>Understanding different types of joins like INNER JOIN, LEFT JOIN, RIGHT JOIN, etc...</p>
+            <pre><code>-- Inner join example
+SELECT orders.id, customers.name
+FROM orders
+INNER JOIN customers ON orders.customer_id = customers.id;
+            </code></pre>
+            <h3>4.2 Subqueries</h3>
+            <p>Using subqueries to perform complex queries...</p>
+            <pre><code>-- Subquery example
+SELECT name
+FROM users
+WHERE id IN (SELECT customer_id FROM orders WHERE total > 100);
+            </code></pre>
+        </section>
+
+        <section id="module15">
+            <h2>Module 5: Indexes & Performance</h2>
+            <h3>5.1 Creating Indexes</h3>
+            <p>Indexes improve query performance by allowing faster access to rows...</p>
+            <pre><code>-- Create an index
+CREATE INDEX idx_users_email ON users(email);
+            </code></pre>
+            <h3>5.2 Query Optimization</h3>
+            <p>Techniques for optimizing queries to improve performance...</p>
+            <pre><code>-- Analyze query performance
+EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'alice@example.com';
+            </code></pre>
+        </section>
+
+        <section id="module16">
+            <h2>Module 6: Transactions & Concurrency</h2>
+            <h3>6.1 Transactions</h3>
+            <p>Managing transactions to ensure data integrity...</p>
+            <pre><code>-- Begin a transaction
+BEGIN;
+
+-- Execute queries
+UPDATE users SET name = 'Bob' WHERE id = 1;
+
+-- Commit the transaction
+COMMIT;
+
+-- Rollback in case of error
+ROLLBACK;
+            </code></pre>
+            <h3>6.2 Concurrency Control</h3>
+            <p>Handling multiple transactions to avoid conflicts and ensure consistency...</p>
+        </section>
+
+        <section id="module17">
+            <h2>Module 7: Stored Procedures & Functions</h2>
+            <h3>7.1 Creating Functions</h3>
+            <p>Defining and using functions to encapsulate reusable SQL logic...</p>
+            <pre><code>-- Create a function
+CREATE FUNCTION get_user_email(user_id INT) RETURNS VARCHAR AS $$
+BEGIN
+    RETURN (SELECT email FROM users WHERE id = user_id);
+END;
+$$ LANGUAGE plpgsql;
+            </code></pre>
+            <h3>7.2 Stored Procedures</h3>
+            <p>Creating stored procedures to perform complex operations...</p>
+        </section>
+
+        <section id="module18">
+            <h2>Module 8: Backup & Restore</h2>
+            <h3>8.1 Backup Strategies</h3>
+            <p>Methods for backing up PostgreSQL databases...</p>
+            <pre><code># Backup a database
+pg_dump mydb > mydb_backup.sql
+            </code></pre>
+            <h3>8.2 Restoring Databases</h3>
+            <p>Restoring databases from backups...</p>
+            <pre><code># Restore a database
+psql mydb < mydb_backup.sql
+            </code></pre>
+        </section>
+
+        <section id="module19">
+            <h2>Module 9: Security</h2>
+            <h3>9.1 User Management</h3>
+            <p>Managing database users and their permissions...</p>
+            <pre><code>-- Create a new user
+CREATE USER new_user WITH PASSWORD 'password';
+
+-- Grant permissions
+GRANT ALL PRIVILEGES ON DATABASE mydb TO new_user;
+            </code></pre>
+            <h3>9.2 Data Encryption</h3>
+            <p>Encrypting data to ensure security...</p>
+        </section>
+
+        <section id="module20">
+            <h2>Module 10: Data Types & Schema Design</h2>
+            <h3>10.1 Understanding Data Types</h3>
+            <p>Overview of different data types in PostgreSQL...</p>
+            <pre><code>-- Create a table with various data types
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    price DECIMAL(10, 2),
+    available BOOLEAN
+);
+            </code></pre>
+            <h3>10.2 Schema Design Best Practices</h3>
+            <p>Best practices for designing a database schema...</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script> 
+</body>
+</html>

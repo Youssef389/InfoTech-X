@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMD Course & Cheat Sheet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CMD Course & Cheat Sheet</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#cmdIntro">Introduction</a></li>
+                <li><a href="#cmdBasics">Basic Commands</a></li>
+                <li><a href="#cmdFileOps">File Operations</a></li>
+                <li><a href="#cmdNetworking">Networking Commands</a></li>
+                <li><a href="#cmdAdvanced">Advanced Commands</a></li>
+                <li><a href="#cmdSheet">Cheat Sheet</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cmdIntro">
+            <h2>Introduction to CMD</h2>
+            <p>The Command Prompt (CMD) is a command-line interpreter application available in most Windows operating systems...</p>
+        </section>
+
+        <section id="cmdBasics">
+            <h2>Basic CMD Commands</h2>
+            <h3>1.1 dir</h3>
+            <p>Lists the files and directories in the current directory.</p>
+            <pre><code>dir</code></pre>
+            <h3>1.2 cd</h3>
+            <p>Changes the current directory to the specified directory.</p>
+            <pre><code>cd [directory]</code></pre>
+            <h3>1.3 mkdir</h3>
+            <p>Creates a new directory.</p>
+            <pre><code>mkdir [directory_name]</code></pre>
+            <h3>1.4 rmdir</h3>
+            <p>Removes a directory.</p>
+            <pre><code>rmdir [directory_name]</code></pre>
+        </section>
+
+        <section id="cmdFileOps">
+            <h2>File Operations</h2>
+            <h3>2.1 copy</h3>
+            <p>Copies one or more files from one location to another.</p>
+            <pre><code>copy [source] [destination]</code></pre>
+            <h3>2.2 del</h3>
+            <p>Deletes one or more files.</p>
+            <pre><code>del [file_name]</code></pre>
+            <h3>2.3 move</h3>
+            <p>Moves one or more files from one location to another.</p>
+            <pre><code>move [source] [destination]</code></pre>
+        </section>
+
+        <section id="cmdNetworking">
+            <h2>Networking Commands</h2>
+            <h3>3.1 ipconfig</h3>
+            <p>Displays IP address, subnet mask, and default gateway for all network adapters.</p>
+            <pre><code>ipconfig</code></pre>
+            <h3>3.2 ping</h3>
+            <p>Sends ICMP Echo Request messages to network hosts.</p>
+            <pre><code>ping [hostname]</code></pre>
+            <h3>3.3 tracert</h3>
+            <p>Traces the route taken by packets to a destination.</p>
+            <pre><code>tracert [hostname]</code></pre>
+        </section>
+
+        <section id="cmdAdvanced">
+            <h2>Advanced CMD Commands</h2>
+            <h3>4.1 tasklist</h3>
+            <p>Displays a list of currently running processes on the local machine.</p>
+            <pre><code>tasklist</code></pre>
+            <h3>4.2 sfc /scannow</h3>
+            <p>Scans and repairs system files.</p>
+            <pre><code>sfc /scannow</code></pre>
+            <h3>4.3 chkdsk</h3>
+            <p>Checks the file system and file system metadata of a volume for logical and physical errors.</p>
+            <pre><code>chkdsk [drive:] [parameters]</code></pre>
+        </section>
+
+        <section id="cmdSheet">
+            <h2>CMD Cheat Sheet</h2>
+            <p>Here's a cheat sheet of some common CMD commands:</p>
+            <pre><code>
+                ## CMD Commands Cheat Sheet
+                
+                ### Basic Commands
+                - **`--help`**: Displays help information about a command.
+                - **`--version`**: Shows the version of the command or program.
+                - **`explorer .`**: Opens the current directory in Windows File Explorer.
+                - **`cd`**: Changes the current directory.
+                - **`mkdir [folder_name]`**: Creates a new directory. (`mkdir " "` creates a directory with a space in the name).
+                - **`rmdir [folder_name]`**: Removes a directory.
+                - **`code .`**: Opens the current directory in Visual Studio Code.
+                - **`clear`**: Clears the terminal screen (use `cls` in Windows).
+                - **`ls`**: Lists directory contents (use `dir` in Windows).
+                - **`dir`**: Lists the contents of a directory in Windows.
+                
+                ### File and Directory Operations
+                - **`mkdir ../folder_name`**: Creates a new directory in the parent directory.
+                - **`mkdir c:\folder_name`**: Creates a directory on the C: drive.
+                - **`cd c:\`**: Changes to the C: drive root directory.
+                - **`move [moved_folder] [new_folder]`**: Moves a folder to a new location (Windows only).
+                - **`mv [moved_folder] [new_folder]`**: Moves or renames a folder (Unix-like systems).
+                - **`mv [moved_folder] ..\`**: Moves a folder to the parent directory.
+                - **`cp [source] [destination]`**: Copies files.
+                - **`cp -r [source] [destination]`**: Recursively copies directories and their contents.
+                - **`rm [file_name]`**: Removes a file.
+                - **`rm -r [directory_name]`**: Recursively removes a directory and its contents.
+                
+                ### File and Text Operations
+                - **`echo [text] > [file_name]`**: Writes text to a file (creates the file if it doesn’t exist).
+                - **`echo [text] >> [file_name]`**: Appends text to a file.
+                - **`cat [file_name]`**: Displays the contents of a file (Unix-like systems).
+                - **`cat [file1] [file2] > [new_file]`**: Concatenates files into a new file.
+                - **`grep "[pattern]" [file_name]`**: Searches for a pattern in a file (Unix-like systems).
+                - **`grep -r -l "[pattern]" [directory]`**: Recursively searches for a pattern in files within a directory.
+                
+                ### System and Process Management
+                - **`exit`**: Exits the command prompt or terminal.
+                - **`file [file_name]`**: Displays file type information (Unix-like systems).
+                - **`rfile [file_name]`**: Removes a file (Unix-like systems).
+                - **`touch [file_name]`**: Creates an empty file or updates the timestamp of a file (Unix-like systems).
+                - **`rename [old_name] [new_name]`**: Renames a file or directory.
+                - **`man [command]`**: Displays the manual for a command (Unix-like systems).
+                - **`/?`**: Displays help information for a command (Windows).
+                - **`tree /a`**: Displays a directory tree structure.
+                
+                ### Additional Commands
+                - **`control + c`**: Interrupts a running command or process (Mac only).
+                - **`osk`**: Opens the On-Screen Keyboard.
+                - **`tasklist`**: Lists all running processes (search for killing processes in the tasklist).
+                - **`alias`**: Creates or lists aliases (Unix-like systems).
+                - **`ipconfig`**: Displays IP configuration information.
+                - **`whoami`**: Displays the current user’s username.
+                - **`systeminfo`**: Displays detailed system information.
+                - **`ping [address]`**: Tests network connectivity to an address.
+                - **`[command] > [file_name].txt`**: Redirects command output to a file.
+                - **`[command] | clip`**: Copies command output to the clipboard (Windows).
+                </code>
+                </pre>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

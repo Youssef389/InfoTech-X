@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="37048402662-removebg.png" type="image/png">
+  <title>Chat-X</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 95vh;
+      background-color: #fff;
+      margin: 0;
+      color: #000;
+    }
+
+    #chat-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      max-height: 100%;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ffd902;
+      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      margin: 0 20px;
+    }
+
+    a:hover {
+      color: #89770c;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #ffd902;
+      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #chat-history {
+      height: 520px;
+      overflow-y: scroll;
+    }
+
+    .user-message {
+      text-align: left;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+
+    .bot-message {
+      text-align: left;
+      padding: 10px;
+      background-color: #ededed;
+      border-radius: 15px;
+      margin-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+    }
+
+    input {
+      flex-grow: 1;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.21);
+    }
+    input:focus {
+      outline: none;
+    }
+
+    button {
+      background-color: #ffd902;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.21);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    button i {
+      font-size: 20px;
+    }
+
+    #loader {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-buttons">
+    <a href="index.html" id="home-button">🏠</a>
+  </div>
+  
+  <div id="chat-container">
+    <h1>Chat-X</h1>
+    <p>"Your AI assistant for every conversation!"</p>
+    <div id="chat-history"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Enter your message">
+      <button type="submit"><i class="ri-send-plane-2-fill"></i></button>
+    </form>
+  </div>
+  
+  <div id="loader">
+    <img src="R.gif" width="150px" alt="Loading...">
+  </div>
+
+  <script>
+    const chatHistory = document.getElementById('chat-history');
+    const userInput = document.getElementById('user-input');
+    const form = document.getElementById('chat-form');
+    
+    async function sendMessage() {
+      const userMessage = userInput.value;
+      userInput.value = ''; 
+      console.log(userMessage);
+      try {
+        const response = await fetch('/chat3', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userInput: userMessage }),
+        });
+
+        const data = await response.json();
+        console.log(data);
+        const botMessage = data.response;
+        console.log(botMessage);
+        chatHistory.innerHTML += `<div class="user-message">${userMessage}</div>`;
+        chatHistory.innerHTML += `<div class="bot-message">${botMessage}</div>`;
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const loader = document.getElementById('loader');
+      loader.style.display = 'block';
+      sendMessage().finally(() => {
+        loader.style.display = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

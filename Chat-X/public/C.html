@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        /* body.dark-mode h3 {
+           color: #ffffff;
+        } */
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Data Types & Operators</a></li>
+                <li><a href="#module3">Control Structures</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Arrays & Strings</a></li>
+                <li><a href="#module6">Pointers & Memory</a></li>
+                <li><a href="#module7">File I/O</a></li>
+                <li><a href="#module8">Structures</a></li>
+                <li><a href="#module9">Dynamic Memory</a></li>
+                <li><a href="#module10">Preprocessor Directives</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to C Programming</h2>
+            <h3>1.1 Overview of C</h3>
+            <p>C is a high-level programming language developed by Dennis Ritchie in the 1970s...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\\n");
+    return 0;
+}
+            </code></pre>
+            <h3>1.2 History of C</h3>
+            <p>C was developed as an evolution of the B language, and it became the foundation for many modern languages...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Data Types, Variables, and Operators</h2>
+            <h3>2.1 Data Types</h3>
+            <p>Basic data types in C include <code>int</code>, <code>float</code>, <code>double</code>, and <code>char</code>...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int age = 30;
+    float height = 5.9;
+    double pi = 3.141592;
+    char initial = 'J';
+
+    printf("Age: %d\\n", age);
+    printf("Height: %.1f\\n", height);
+    printf("Pi: %.5f\\n", pi);
+    printf("Initial: %c\\n", initial);
+
+    return 0;
+}
+            </code></pre>
+            <h3>2.2 Operators</h3>
+            <p>Operators in C include arithmetic, relational, logical, and bitwise operators...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10, b = 20;
+    printf("a + b = %d\\n", a + b);
+    printf("a - b = %d\\n", a - b);
+    printf("a * b = %d\\n", a * b);
+    printf("a / b = %d\\n", a / b);
+    printf("a %% b = %d\\n", a % b);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Structures</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>If-Else statements help in making decisions in C programming...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int number = 15;
+
+    if (number % 2 == 0) {
+        printf("The number is even.\\n");
+    } else {
+        printf("The number is odd.\\n");
+    }
+
+    return 0;
+}
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Loops allow you to execute a block of code multiple times...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    // For loop
+    for (int i = 0; i &lt; 5; i++) {
+        printf("For loop iteration %d\\n", i);
+    }
+
+    // While loop
+    int j = 0;
+    while (j &lt; 5) {
+        printf("While loop iteration %d\\n", j);
+        j++;
+    }
+
+    // Do-While loop
+    int k = 0;
+    do {
+        printf("Do-While loop iteration %d\\n", k);
+        k++;
+    } while (k &lt; 5);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Function Basics</h3>
+            <p>Functions in C help in organizing code into reusable blocks...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+void greet() {
+    printf("Hello, World!\\n");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = add(5, 3);
+    printf("Sum: %d\\n", result);
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Arrays & Strings</h2>
+            <h3>5.1 Arrays</h3>
+            <p>Arrays store multiple values of the same type in a single variable...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5}; // Array of integers
+
+    for (int i = 0; i &lt; 5; i++) {
+        printf("Number %d: %d\\n", i, numbers[i]); // Accessing each element
+    }
+
+    return 0;
+}
+            </code></pre>
+            <h3>5.2 Strings</h3>
+            <p>Strings in C are arrays of characters terminated by a null character (`'\0'`)...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main() {
+    char name[] = "John Doe"; // String initialization
+
+    printf("Name: %s\\n", name); // Printing string
+
+    // String length
+    printf("Length of the name: %zu\\n", strlen(name));
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Pointers & Memory</h2>
+            <h3>6.1 Pointers</h3>
+            <p>Pointers are variables that store the address of another variable...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int value = 10;      // Integer variable
+    int *ptr = &value;   // Pointer to integer
+
+    printf("Value: %d\\n", value);
+    printf("Pointer: %p\\n", ptr);           // Address of the variable
+    printf("Value through pointer: %d\\n", *ptr); // Value at the address
+
+    return 0;
+}
+            </code></pre>
+            <h3>6.2 Dynamic Memory Allocation</h3>
+            <p>Dynamic memory allocation allows you to allocate memory at runtime...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *arr = (int *)malloc(5 * sizeof(int)); // Allocating memory for an array of 5 integers
+
+    for (int i = 0; i &lt; 5; i++) {
+        arr[i] = i * 2; // Initializing array
+        printf("Element %d: %d\\n", i, arr[i]);
+    }
+
+    free(arr); // Deallocating memory
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: File I/O</h2>
+            <h3>7.1 Reading from Files</h3>
+            <p>Files can be read using functions like <code>fopen</code>, <code>fgetc</code>, and <code>fgets</code>...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file = fopen("example.txt", "r");
+    if (file == NULL) {
+        printf("Failed to open file.\\n");
+        return 1;
+    }
+
+    char ch;
+    while ((ch = fgetc(file)) != EOF) {
+        printf("%c", ch);
+    }
+
+    fclose(file);
+    return 0;
+}
+            </code></pre>
+            <h3>7.2 Writing to Files</h3>
+            <p>Files can be written using functions like <code>fopen</code>, <code>fprintf</code>, and <code>fputs</code>...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file = fopen("example.txt", "w");
+    if (file == NULL) {
+        printf("Failed to open file.\\n");
+        return 1;
+    }
+
+    fprintf(file, "Hello, World!\\n");
+    fclose(file);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Structures</h2>
+            <h3>8.1 Defining and Using Structures</h3>
+            <p>Structures are used to group variables of different types under a single name...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Person person;
+    strcpy(person.name, "Alice");
+    person.age = 30;
+
+    printf("Name: %s\\n", person.name);
+    printf("Age: %d\\n", person.age);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Dynamic Memory Allocation</h2>
+            <h3>9.1 Allocating and Deallocating Memory</h3>
+            <p>Dynamic memory allocation allows you to allocate and deallocate memory at runtime...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *arr = (int *)malloc(10 * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed.\\n");
+        return 1;
+    }
+
+    for (int i = 0; i &lt; 10; i++) {
+        arr[i] = i;
+        printf("%d\\n", arr[i]);
+    }
+
+    free(arr);
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Preprocessor Directives</h2>
+            <h3>10.1 Macros</h3>
+            <p>Macros are used to define constants and functions...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+#define PI 3.14159
+
+int main() {
+    printf("Value of PI: %f\\n", PI);
+    return 0;
+}
+            </code></pre>
+            <h3>10.2 Conditional Compilation</h3>
+            <p>Conditional compilation allows you to compile code selectively based on certain conditions...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+#define DEBUG
+
+int main() {
+    #ifdef DEBUG
+    printf("Debug mode is enabled.\\n");
+    #endif
+
+    return 0;
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('toggleBtn').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            this.textContent = document.body.classList.contains('dark-mode') ? '🌚' : '🌞';
+        });
+
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>

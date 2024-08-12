@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - InfoTech-X</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="37048402662-removebg.png">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            border-radius: 25px;
+            background-color:white ;
+            background-size: cover;
+            background-position: center;
+            color: #ffd813;
+            text-shadow: #333;
+            padding: 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 12px;
+            width: 90%;
+            margin-left: 5%;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.866); /* Dark overlay */
+            z-index: 0;
+            border-radius: 25px;
+        }
+
+        .logo {
+            font-size: 2.9rem;
+            font-weight: bold;
+            z-index: 1;
+            position: relative;
+            text-shadow: 5px 0px 10px #33333324;
+        }
+        .logo img{
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(5px 5px 5px #00000028);
+        }
+        .logo a {
+            text-decoration: none;
+            color: #ffd813;
+            transition: color 0.3s;
+            font-size: 2.75rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            /* padding: 20px; */
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            padding-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #ffd902;
+        }
+
+        .header-content {
+            animation: slideIn 1.5s ease-in-out;
+            z-index: 1;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .about-section ul {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            float: left;
+            margin: 0 20px 20px 0;
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+        .about-image-right {
+            float: right;
+            margin: 0 0 20px 20px;
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section h1 {
+                font-size: 2rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header {
+                padding: 60px 20px;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .about-image, .about-image-right {
+                float: none;
+                max-width: 100%;
+                margin: 0;
+                display: block;
+                margin: 20px auto;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Home Button Styles */
+        .home-button {
+            position: fixed;
+            bottom: 70px; /* Adjust based on footer height */
+            right: 20px;
+            background-color: #ffd902;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Ensures it stays on top */
+        }
+
+        .home-button a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+
+        .home-button a:hover {
+            color: #ffd813;
+        }
+
+        /* Footer Profile Styles */
+        .footer-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-description h3 {
+            margin: 0;
+            font-size: 1.7rem;
+        }
+
+        .profile-description p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #666;
+        }
+        .profile-description a {
+            text-decoration: none;
+            color: #333;
+            font-size: 2rem;
+            margin-left: 10px;
+            transition: color 0.3s;
+        }
+        /* .profile-description svg {
+            size: 1.5rem;
+            font-size: 1.5rem;
+
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo"><img src="37048402662-removebg.png">&nbsp; InfoTech-X <a href="index.html" title="Home">&#127968;</a></div>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            
+            <img src="Aboutus.jpg" alt="Programming" class="about-image">
+            <h1>About Us</h1>
+            <p>Welcome to InfoTech-X, a premier destination for mastering the art of programming and technology. We are dedicated to empowering learners at all levels with the tools, knowledge, and support needed to excel in the ever-evolving world of technology.</p>
+            <br>
+            <br>
+            <br>
+            <img src="ourmission.jpg" alt="Our Mission" class="about-image-right">
+            <h1>Our Mission</h1>
+            <p>At InfoTech-X, our mission is to provide an unparalleled learning experience that bridges the gap between theory and practical application. We believe that programming is not just a skill but a gateway to innovation, creativity, and problem-solving. Our goal is to make learning accessible, engaging, and tailored to individual needs, helping you turn your passion for technology into a rewarding career.</p>
+           <br>
+            <img src="whatweoffer.png" alt="Tutorials" class="about-image">
+            <h1>What We Offer</h1>
+            <p>We offer a comprehensive range of programming tutorials, covering everything from foundational languages like C and Java to advanced frameworks and technologies. Our curriculum is designed by industry experts to ensure that you gain the skills that matter in today’s tech landscape.</p>
+            <br>
+            <ul>
+                <li><strong>In-Depth Tutorials:</strong> Our tutorials are meticulously crafted to provide a deep understanding of programming concepts.</li>
+                <li><strong>AI-Powered Learning Tools:</strong> Leveraging cutting-edge AI technology, our platform offers personalized learning paths, interactive coding environments, and instant feedback to enhance your learning journey.</li>
+                <li><strong>Community and Support:</strong> Join a vibrant community of learners, mentors, and professionals. Whether you're just starting or looking to advance your career, our support system is here to guide you every step of the way.</li>
+            </ul>
+            <img src="ourexpertise.png" alt="Expertise" class="about-image-right">
+            <h1>Our Expertise</h1>
+            <p>With a team of seasoned professionals, educators, and tech enthusiasts, we bring decades of collective experience to the table. Our instructors are not just experts in their fields—they are passionate about teaching and committed to your success. We continuously update our content to reflect the latest industry trends and best practices, ensuring that you stay ahead of the curve.</p>
+           <br>
+            <h1>Why Choose Us?</h1>
+            <p>At InfoTech-X, we are more than just a learning platform. We are your partners in growth, providing:</p>
+            <ul>
+                <li><strong>Cutting-Edge Content:</strong> Stay current with the latest advancements in technology through our regularly updated tutorials and resources.</li> 
+                <li><strong>Flexible Learning:</strong> Learn at your own pace, on your own schedule, with tutorials that fit into your busy life.</li> 
+            </ul>
+            
+            <img src="joinus.jpg" alt="Join Us" class="about-image">
+            <h1>Join Us</h1>
+            <p>Whether you’re a beginner eager to learn the basics or an experienced developer looking to expand your skill set, InfoTech-X is the place for you. Discover your potential, achieve your goals, and join a community of learners who are shaping the future of technology.</p>
+            <p>Let’s code the future together.</p>
+            <p><strong>InfoTech-X Team</strong></p>
+        </section>
+    </div>
+
+    <!-- Home Button -->
+    <!-- <div class="home-button">
+        <a href="index.html" title="Home">&#127968;</a>
+    </div> -->
+
+    <!-- Footer Profile Section -->
+    <div class="footer-profile">
+        <img src="meeeeeee.jpeg" alt="Youssef Emad" class="profile-photo">
+        <div class="profile-description">
+            <h3>Youssef Emad (Founder & CEO)</h3>
+            <p>Passionate web developer and tech enthusiast.</p>
+            <p>Dedicated to learning and teaching programming with a focus on practical skills and innovative solutions.</p>
+            <a href="https://www.linkedin.com/in/youssef-emad-71569428b/" target="_blank">  <i class="ri-linkedin-box-fill"></i></a>
+            <a href="https://github.com/Youssef389" target="_blank">  <i class="ri-github-fill"></i></a>
+        </div>
+    </div>
+    <br>
+    <br>
+  
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 InfoTech-X. All rights reserved.</p>
+    </footer>
+</body>
+</html>

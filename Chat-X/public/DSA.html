@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures & Algorithms Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1, body.dark-mode h2 {
+            color: #ffffff;
+        }
+
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Structures & Algorithms Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Arrays</a></li>
+                <li><a href="#module3">Linked Lists</a></li>
+                <li><a href="#module4">Stacks</a></li>
+                <li><a href="#module5">Queues</a></li>
+                <li><a href="#module6">Trees</a></li>
+                <li><a href="#module7">Graphs</a></li>
+                <li><a href="#module8">Hash Tables</a></li>
+                <li><a href="#module9">Heaps</a></li>
+                <li><a href="#module10">Sorting & Searching</a></li>
+                <li><a href="#module11">Introduction</a></li>
+                <li><a href="#module12">Sorting Algorithms</a></li>
+                <li><a href="#module13">Searching Algorithms</a></li>
+                <li><a href="#module14">Graph Algorithms</a></li>
+                <li><a href="#module15">Dynamic Programming</a></li>
+                <li><a href="#module16">Greedy Algorithms</a></li>
+                <li><a href="#module17">Backtracking</a></li>
+                <li><a href="#module18">Divide and Conquer</a></li>
+                <li><a href="#module19">Complexity Analysis</a></li>
+                <li><a href="#module20">Advanced Topics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Data Structures</h2>
+            <h3>1.1 What is a Data Structure?</h3>
+            <p>Data structures are a way of organizing and storing data to enable efficient access and modification...</p>
+            <pre><code>/* Example of data structure in C */
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Data structures can be implemented using arrays, linked lists, etc.
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Arrays</h2>
+            <h3>2.1 Definition and Usage</h3>
+            <p>Arrays are collections of elements stored in contiguous memory locations...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int numbers[5] = {1, 2, 3, 4, 5};
+    for (int i = 0; i &lt; 5; i++) {
+        printf("%d\\n", numbers[i]);
+    }
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Linked Lists</h2>
+            <h3>3.1 Introduction</h3>
+            <p>Linked lists are collections of nodes where each node contains a data element and a reference to the next node...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+int main() {
+    struct Node *head = (struct Node *)malloc(sizeof(struct Node));
+    head->data = 1;
+    head->next = NULL;
+
+    printf("Node data: %d\\n", head->data);
+    free(head);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Stacks</h2>
+            <h3>4.1 Definition and Operations</h3>
+            <p>Stacks are collections of elements that follow the Last In First Out (LIFO) principle...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define MAX 100
+
+typedef struct {
+    int items[MAX];
+    int top;
+} Stack;
+
+void push(Stack *s, int value) {
+    if (s->top &lt; MAX - 1) {
+        s->items[++(s->top)] = value;
+    }
+}
+
+int pop(Stack *s) {
+    if (s->top &gt;= 0) {
+        return s->items[(s->top)--];
+    }
+    return -1; // Error: stack is empty
+}
+
+int main() {
+    Stack s;
+    s.top = -1;
+    push(&s, 10);
+    printf("Popped value: %d\\n", pop(&s));
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Queues</h2>
+            <h3>5.1 Definition and Operations</h3>
+            <p>Queues are collections of elements that follow the First In First Out (FIFO) principle...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define MAX 100
+
+typedef struct {
+    int items[MAX];
+    int front, rear;
+} Queue;
+
+void enqueue(Queue *q, int value) {
+    if (q->rear &lt; MAX - 1) {
+        q->items[++(q->rear)] = value;
+    }
+}
+
+int dequeue(Queue *q) {
+    if (q->front &lt;= q->rear) {
+        return q->items[(q->front)++];
+    }
+    return -1; // Error: queue is empty
+}
+
+int main() {
+    Queue q;
+    q.front = 0;
+    q.rear = -1;
+    enqueue(&q, 10);
+    printf("Dequeued value: %d\\n", dequeue(&q));
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Trees</h2>
+            <h3>6.1 Introduction</h3>
+            <p>Trees are hierarchical data structures with nodes connected by edges...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef struct Node {
+    int data;
+    struct Node *left, *right;
+} Node;
+
+Node* createNode(int data) {
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->data = data;
+    newNode->left = newNode->right = NULL;
+    return newNode;
+}
+
+int main() {
+    Node *root = createNode(1);
+    root->left = createNode(2);
+    root->right = createNode(3);
+
+    printf("Root data: %d\\n", root->data);
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Graphs</h2>
+            <h3>7.1 Introduction</h3>
+            <p>Graphs are collections of nodes (vertices) connected by edges...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define V 5
+
+typedef struct {
+    int adjMatrix[V][V];
+} Graph;
+
+void addEdge(Graph *g, int start, int end) {
+    g->adjMatrix[start][end] = 1;
+    g->adjMatrix[end][start] = 1;
+}
+
+int main() {
+    Graph g;
+    for (int i = 0; i &lt; V; i++) {
+        for (int j = 0; j &lt; V; j++) {
+            g.adjMatrix[i][j] = 0;
+        }
+    }
+    addEdge(&g, 0, 1);
+    printf("Edge added between 0 and 1\\n");
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Hash Tables</h2>
+            <h3>8.1 Introduction</h3>
+            <p>Hash tables provide a way to store and retrieve data efficiently using hash functions...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define TABLE_SIZE 10
+
+typedef struct {
+    int key;
+    int value;
+} HashItem;
+
+typedef struct {
+    HashItem *items[TABLE_SIZE];
+} HashTable;
+
+unsigned int hash(int key) {
+    return key % TABLE_SIZE;
+}
+
+void insert(HashTable *table, int key, int value) {
+    unsigned int index = hash(key);
+    table->items[index] = (HashItem *)malloc(sizeof(HashItem));
+    table->items[index]->key = key;
+    table->items[index]->value = value;
+}
+
+int main() {
+    HashTable table;
+    for (int i = 0; i &lt; TABLE_SIZE; i++) {
+        table.items[i] = NULL;
+    }
+    insert(&table, 1, 100);
+    printf("Inserted key 1 with value 100\\n");
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Heaps</h2>
+            <h3>9.1 Introduction</h3>
+            <p>Heaps are binary trees with special properties used for efficient priority queue operations...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define MAX 100
+
+typedef struct {
+    int size;
+    int items[MAX];
+} Heap;
+
+void insert(Heap *h, int value) {
+    int i = h->size++;
+    while (i &gt; 0 && value &gt; h->items[(i - 1) / 2]) {
+        h->items[i] = h->items[(i - 1) / 2];
+        i = (i - 1) / 2;
+    }
+    h->items[i] = value;
+}
+
+int main() {
+    Heap heap;
+    heap.size = 0;
+    insert(&heap, 10);
+    printf("Inserted value 10 into the heap\\n");
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Sorting & Searching</h2>
+            <h3>10.1 Sorting Algorithms</h3>
+            <p>Sorting algorithms arrange data in a specified order...</p>
+            <pre><code>#include &lt;stdio.h&gt;
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i &lt; n - 1; i++) {
+        for (int j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, n);
+    printf("Sorted array: ");
+    for (int i = 0; i &lt; n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\\n");
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="module11">
+            <h2>Module 1: Introduction to Algorithms</h2>
+            <h3>1.1 Overview of Algorithms</h3>
+            <p>An algorithm is a step-by-step procedure for solving a problem or performing a task...</p>
+            <pre><code>
+1. Define the problem.
+2. Break the problem into smaller sub-problems.
+3. Develop a step-by-step procedure to solve each sub-problem.
+4. Combine the solutions of sub-problems to get the final result.
+            </code></pre>
+            <h3>1.2 Importance of Algorithms</h3>
+            <p>Algorithms are crucial in computer science as they provide a clear and effective method for solving problems...</p>
+        </section>
+
+        <section id="module12">
+            <h2>Module 2: Sorting Algorithms</h2>
+            <h3>2.1 Bubble Sort</h3>
+            <p>Bubble sort is a simple comparison-based sorting algorithm...</p>
+            <pre><code>
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n-1; i++) {
+        for (int j = 0; j < n-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                // Swap arr[j] and arr[j+1]
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+}
+            </code></pre>
+            <h3>2.2 Merge Sort</h3>
+            <p>Merge sort is a divide-and-conquer algorithm...</p>
+            <pre><code>
+void merge(int arr[], int l, int m, int r) {
+    // Merge function implementation
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
+        int m = l + (r - l) / 2;
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+        merge(arr, l, m, r);
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module13">
+            <h2>Module 3: Searching Algorithms</h2>
+            <h3>3.1 Linear Search</h3>
+            <p>Linear search is a simple searching algorithm...</p>
+            <pre><code>
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}
+            </code></pre>
+            <h3>3.2 Binary Search</h3>
+            <p>Binary search is a more efficient searching algorithm for sorted arrays...</p>
+            <pre><code>
+int binarySearch(int arr[], int size, int target) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+            </code></pre>
+        </section>
+
+        <section id="module14">
+            <h2>Module 4: Graph Algorithms</h2>
+            <h3>4.1 Depth-First Search (DFS)</h3>
+            <p>DFS is an algorithm for traversing or searching tree or graph data structures...</p>
+            <pre><code>
+void DFS(int v, bool visited[], vector<int> adj[]) {
+    visited[v] = true;
+    cout << v << " ";
+    for (int i : adj[v]) {
+        if (!visited[i]) {
+            DFS(i, visited, adj);
+        }
+    }
+}
+            </code></pre>
+            <h3>4.2 Dijkstra's Algorithm</h3>
+            <p>Dijkstra's algorithm finds the shortest path between nodes in a graph...</p>
+            <pre><code>
+void dijkstra(vector<vector<int>>& graph, int src) {
+    // Dijkstra's algorithm implementation
+}
+            </code></pre>
+        </section>
+
+        <section id="module15">
+            <h2>Module 5: Dynamic Programming</h2>
+            <h3>5.1 Fibonacci Sequence</h3>
+            <p>Dynamic programming can be used to solve the Fibonacci sequence efficiently...</p>
+            <pre><code>
+int fib(int n) {
+    vector<int> dp(n+1);
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++) {
+        dp[i] = dp[i-1] + dp[i-2];
+    }
+    return dp[n];
+}
+            </code></pre>
+            <h3>5.2 Knapsack Problem</h3>
+            <p>The knapsack problem is a classic optimization problem...</p>
+            <pre><code>
+int knapSack(int W, vector<int> wt, vector<int> val, int n) {
+    vector<vector<int>> dp(n+1, vector<int>(W+1));
+    for (int i = 0; i <= n; i++) {
+        for (int w = 0; w <= W; w++) {
+            if (i == 0 || w == 0) {
+                dp[i][w] = 0;
+            } else if (wt[i-1] <= w) {
+                dp[i][w] = max(val[i-1] + dp[i-1][w-wt[i-1]], dp[i-1][w]);
+            } else {
+                dp[i][w] = dp[i-1][w];
+            }
+        }
+    }
+    return dp[n][W];
+}
+            </code></pre>
+        </section>
+
+        <section id="module16">
+            <h2>Module 6: Greedy Algorithms</h2>
+            <h3>6.1 Activity Selection</h3>
+            <p>Greedy algorithms work by selecting the best option at each step...</p>
+            <pre><code>
+void activitySelection(vector<int> start, vector<int> finish) {
+    // Greedy activity selection implementation
+}
+            </code></pre>
+            <h3>6.2 Huffman Coding</h3>
+            <p>Huffman coding is used for data compression...</p>
+            <pre><code>
+void huffmanCoding(vector<char> data, vector<int> freq) {
+    // Huffman coding implementation
+}
+            </code></pre>
+        </section>
+
+        <section id="module17">
+            <h2>Module 7: Backtracking</h2>
+            <h3>7.1 N-Queens Problem</h3>
+            <p>Backtracking is used to solve constraint satisfaction problems...</p>
+            <pre><code>
+void solveNQueens(int row, vector<vector<int>>& board) {
+    // Backtracking solution for N-Queens
+}
+            </code></pre>
+            <h3>7.2 Sudoku Solver</h3>
+            <p>Sudoku solver using backtracking...</p>
+            <pre><code>
+bool solveSudoku(vector<vector<int>>& board) {
+    // Backtracking solution for Sudoku
+}
+            </code></pre>
+        </section>
+
+        <section id="module18">
+            <h2>Module 8: Divide and Conquer</h2>
+            <h3>8.1 Merge Sort</h3>
+            <p>Merge sort is an example of a divide-and-conquer algorithm...</p>
+            <pre><code>
+void mergeSort(int arr[], int l, int r) {
+    // Divide and conquer implementation for Merge Sort
+}
+            </code></pre>
+            <h3>8.2 Quick Sort</h3>
+            <p>Quick sort is another divide-and-conquer algorithm...</p>
+            <pre><code>
+void quickSort(int arr[], int low, int high) {
+    // Divide and conquer implementation for Quick Sort
+}
+            </code></pre>
+        </section>
+
+        <section id="module19">
+            <h2>Module 9: Complexity Analysis</h2>
+            <h3>9.1 Big O Notation</h3>
+            <p>Big O notation is used to describe the time complexity of algorithms...</p>
+            <pre><code>
+void exampleFunction() {
+    // Example to analyze time complexity
+}
+            </code></pre>
+            <h3>9.2 Time and Space Complexity</h3>
+            <p>Understanding time and space complexity is crucial for analyzing algorithm efficiency...</p>
+        </section>
+
+        <section id="module20">
+            <h2>Module 10: Advanced Topics</h2>
+            <h3>10.1 Advanced Data Structures</h3>
+            <p>Explore advanced data structures like AVL trees, Red-Black trees, and more...</p>
+            <pre><code>
+void advancedDataStructures() {
+    // Implementation of advanced data structures
+}
+            </code></pre>
+            <h3>10.2 Approximation Algorithms</h3>
+            <p>Approximation algorithms are used for problems where exact solutions are not feasible...</p>
+            <pre><code>
+void approximationAlgorithm() {
+    // Implementation of approximation algorithms
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script> 
+</body>
+</html>

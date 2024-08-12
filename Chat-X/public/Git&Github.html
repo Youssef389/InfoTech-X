@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+            color: #ffffff;
+        }
+        body.dark-mode h2 {
+            color: #ffffff;
+        }
+
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Git & GitHub Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Git Basics</a></li>
+                <li><a href="#module3">Branching</a></li>
+                <li><a href="#module4">Merging</a></li>
+                <li><a href="#module5">Remote Repositories</a></li>
+                <li><a href="#module6">GitHub</a></li>
+                <li><a href="#module7">Collaboration</a></li>
+                <li><a href="#module8">Advanced Git</a></li>
+                <li><a href="#module9">Git Workflows</a></li>
+                <li><a href="#module10">Best Practices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Git & GitHub</h2>
+            <h3>1.1 What is Version Control?</h3>
+            <p>Version control systems are tools that help manage changes to source code over time...</p>
+            <pre><code>$ git --version
+git version 2.28.0
+            </code></pre>
+            <h3>1.2 Why Git?</h3>
+            <p>Git is a distributed version control system, known for its speed, efficiency, and flexibility...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Git Basics</h2>
+            <h3>2.1 Installing Git</h3>
+            <p>Git can be installed on various platforms. Visit the official Git website to download and install...</p>
+            <pre><code>$ sudo apt-get install git
+            </code></pre>
+            <h3>2.2 Initializing a Repository</h3>
+            <p>Initialize a new Git repository with the <code>git init</code> command...</p>
+            <pre><code>$ git init my-repo
+Initialized empty Git repository in /path/to/my-repo/.git/
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Branching</h2>
+            <h3>3.1 Understanding Branches</h3>
+            <p>Branches allow you to work on different versions of your project simultaneously...</p>
+            <pre><code>$ git branch feature-branch
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+            </code></pre>
+            <h3>3.2 Creating and Switching Branches</h3>
+            <p>Creating and switching between branches is a fundamental skill in Git...</p>
+            <pre><code>$ git checkout -b new-feature
+Switched to a new branch 'new-feature'
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Merging</h2>
+            <h3>4.1 Fast-Forward Merge</h3>
+            <p>A fast-forward merge happens when there is a direct path from the current branch to the target branch...</p>
+            <pre><code>$ git merge feature-branch
+Updating 3b2d3f0..4e6e2a2
+Fast-forward
+ file.txt | 1 +
+ 1 file changed, 1 insertion(+)
+            </code></pre>
+            <h3>4.2 Merge Conflicts</h3>
+            <p>Merge conflicts occur when Git cannot automatically resolve differences between two commits...</p>
+            <pre><code>$ git merge feature-branch
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Remote Repositories</h2>
+            <h3>5.1 Cloning a Repository</h3>
+            <p>Clone a remote repository to your local machine using the <code>git clone</code> command...</p>
+            <pre><code>$ git clone https://github.com/user/repo.git
+Cloning into 'repo'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+            </code></pre>
+            <h3>5.2 Fetching and Pulling</h3>
+            <p>The <code>git fetch</code> command downloads changes from a remote repository...</p>
+            <pre><code>$ git fetch origin
+$ git pull origin main
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Introduction to GitHub</h2>
+            <h3>6.1 Setting Up a GitHub Account</h3>
+            <p>Sign up for a GitHub account to host your repositories and collaborate with others...</p>
+            <h3>6.2 Creating a Repository on GitHub</h3>
+            <p>Create a new repository on GitHub by clicking the "New" button on the GitHub homepage...</p>
+            <pre><code>git remote add origin https://github.com/user/repo.git
+git push -u origin main
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Collaboration on GitHub</h2>
+            <h3>7.1 Forking a Repository</h3>
+            <p>Fork a repository to make a copy of it under your own GitHub account...</p>
+            <h3>7.2 Creating a Pull Request</h3>
+            <p>Create a pull request to suggest changes to a repository you don't own...</p>
+            <pre><code>git checkout -b new-feature
+git commit -m "Added new feature"
+git push origin new-feature
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Advanced Git</h2>
+            <h3>8.1 Rebasing</h3>
+            <p>Rebasing is the process of moving or combining a sequence of commits to a new base commit...</p>
+            <pre><code>git rebase main
+            </code></pre>
+            <h3>8.2 Cherry-Picking</h3>
+            <p>Cherry-picking allows you to apply a specific commit from one branch into another...</p>
+            <pre><code>git cherry-pick abc123
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Git Workflows</h2>
+            <h3>9.1 Gitflow Workflow</h3>
+            <p>The Gitflow workflow is a set of guidelines for managing branches and releases...</p>
+            <h3>9.2 Forking Workflow</h3>
+            <p>The forking workflow is often used in open-source projects...</p>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Best Practices</h2>
+            <h3>10.1 Writing Good Commit Messages</h3>
+            <p>Writing clear and concise commit messages is crucial for maintaining a clean history...</p>
+            <h3>10.2 Regularly Pushing Changes</h3>
+            <p>Regularly push your changes to avoid losing work and to keep your teammates updated...</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const homeBtn = document.getElementById('homeBtn');
+
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌚';
+        });
+
+        homeBtn.addEventListener('click', () => {
+            window.location.href = 'index.html'; // Modify this as needed for your site structure
+        });
+    </script>
+</body>
+</html>

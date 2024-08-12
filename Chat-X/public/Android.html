@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="37048402662-removebg.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Android Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Basic Syntax</a></li>
+                <li><a href="#module3">Control Flow</a></li>
+                <li><a href="#module4">Functions</a></li>
+                <li><a href="#module5">Classes & Objects</a></li>
+                <li><a href="#module6">Collections</a></li>
+                <li><a href="#module7">Null Safety</a></li>
+                <li><a href="#module8">Higher-Order Functions</a></li>
+                <li><a href="#module9">Coroutines</a></li>
+                <li><a href="#module10">Advanced Topics</a></li>
+                <li><a href="#module11">Introduction</a></li>
+                <li><a href="#module12">Flutter Basics</a></li>
+                <li><a href="#module13">Widgets</a></li>
+                <li><a href="#module14">State Management</a></li>
+                <li><a href="#module15">Navigation</a></li>
+                <li><a href="#module16">Network Requests</a></li>
+                <li><a href="#module17">Local Storage</a></li>
+                <li><a href="#module18">Animations</a></li>
+                <li><a href="#module19">Testing</a></li>
+                <li><a href="#module20">Deployment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to Kotlin</h2>
+            <h3>1.1 Overview of Kotlin</h3>
+            <p>Kotlin is a modern, statically typed programming language that runs on the JVM...</p>
+            <pre><code>fun main() {
+    println("Hello, Kotlin!")
+}
+            </code></pre>
+            <h3>1.2 Setting Up Kotlin</h3>
+            <p>Learn how to set up your development environment for Kotlin...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic Syntax</h2>
+            <h3>2.1 Variables and Data Types</h3>
+            <p>Kotlin supports a rich set of data types...</p>
+            <pre><code>fun main() {
+    val name: String = "Kotlin"
+    val age: Int = 5
+    println("Name: $name")
+    println("Age: $age")
+}
+            </code></pre>
+            <h3>2.2 Expressions and Statements</h3>
+            <p>Understanding expressions and statements in Kotlin...</p>
+            <pre><code>fun main() {
+    val sum = 1 + 2
+    println("Sum: $sum")
+}
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Control Flow</h2>
+            <h3>3.1 Conditional Statements</h3>
+            <p>Use <code>if</code> and <code>when</code> statements to control the flow of your program...</p>
+            <pre><code>fun main() {
+    val number = 10
+
+    if (number % 2 == 0) {
+        println("Even")
+    } else {
+        println("Odd")
+    }
+}
+            </code></pre>
+            <h3>3.2 Loops</h3>
+            <p>Kotlin provides various looping mechanisms...</p>
+            <pre><code>fun main() {
+    for (i in 1..5) {
+        println("Iteration: $i")
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Functions</h2>
+            <h3>4.1 Function Basics</h3>
+            <p>Define and call functions in Kotlin...</p>
+            <pre><code>fun greet() {
+    println("Hello, Kotlin!")
+}
+
+fun main() {
+    greet()
+}
+            </code></pre>
+            <h3>4.2 Function Parameters and Return Values</h3>
+            <p>Functions can accept parameters and return values...</p>
+            <pre><code>fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val sum = add(5, 3)
+    println("Sum: $sum")
+}
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Classes & Objects</h2>
+            <h3>5.1 Defining Classes</h3>
+            <p>Learn how to define classes and create objects in Kotlin...</p>
+            <pre><code>class Person(val name: String, var age: Int)
+
+fun main() {
+    val person = Person("Alice", 30)
+    println("Name: ${person.name}, Age: ${person.age}")
+}
+            </code></pre>
+            <h3>5.2 Inheritance and Interfaces</h3>
+            <p>Explore inheritance and interfaces in Kotlin...</p>
+            <pre><code>open class Animal(val name: String)
+
+class Dog(name: String) : Animal(name)
+
+fun main() {
+    val dog = Dog("Buddy")
+    println("Dog name: ${dog.name}")
+}
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Collections</h2>
+            <h3>6.1 Lists</h3>
+            <p>Working with lists in Kotlin...</p>
+            <pre><code>fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5)
+    numbers.forEach { println(it) }
+}
+            </code></pre>
+            <h3>6.2 Maps</h3>
+            <p>Understanding and using maps...</p>
+            <pre><code>fun main() {
+    val map = mapOf("key1" to "value1", "key2" to "value2")
+    map.forEach { (key, value) -> println("$key: $value") }
+}
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Null Safety</h2>
+            <h3>7.1 Nullable Types</h3>
+            <p>Handling nullable types in Kotlin...</p>
+            <pre><code>fun main() {
+    val name: String? = null
+    println("Name: ${name ?: "Unknown"}")
+}
+            </code></pre>
+            <h3>7.2 Safe Calls and the Elvis Operator</h3>
+            <p>Use safe calls and the Elvis operator to handle null values...</p>
+            <pre><code>fun main() {
+    val length: Int? = "Hello".length
+    println("Length: ${length ?: 0}")
+}
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Higher-Order Functions</h2>
+            <h3>8.1 Function Types and Lambdas</h3>
+            <p>Introduction to function types and lambdas in Kotlin...</p>
+            <pre><code>fun main() {
+    val list = listOf(1, 2, 3, 4, 5)
+    val doubled = list.map { it * 2 }
+    println("Doubled: $doubled")
+}
+            </code></pre>
+            <h3>8.2 Higher-Order Functions</h3>
+            <p>Creating and using higher-order functions...</p>
+            <pre><code>fun operate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
+    return operation(a, b)
+}
+
+fun main() {
+    val result = operate(5, 3) { x, y -> x + y }
+    println("Result: $result")
+}
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Coroutines</h2>
+            <h3>9.1 Introduction to Coroutines</h3>
+            <p>Understanding coroutines and their use cases...</p>
+            <pre><code>import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    launch {
+        delay(1000L)
+        println("World!")
+    }
+    println("Hello,")
+}
+            </code></pre>
+            <h3>9.2 Using Coroutines for Asynchronous Programming</h3>
+            <p>Implementing asynchronous programming with coroutines...</p>
+            <pre><code>import kotlinx.coroutines.*
+
+fun fetchData(): String {
+    Thread.sleep(1000L)
+    return "Data"
+}
+
+fun main() = runBlocking {
+    launch {
+        val data = withContext(Dispatchers.IO) { fetchData() }
+        println(data)
+    }
+}
+            </code></pre>
+        </section>
+
+        <section id="module10">
+            <h2>Module 10: Advanced Topics</h2>
+            <h3>10.1 DSLs (Domain-Specific Languages)</h3>
+            <p>Creating and using DSLs in Kotlin...</p>
+            <pre><code>fun html(block: HTML.() -> Unit) {
+    val html = HTML()
+    html.block()
+    println(html)
+}
+
+class HTML {
+    fun body(block: BODY.() -> Unit) {
+        val body = BODY()
+        body.block()
+        println("<body>$body</body>")
+    }
+
+    override fun toString() = "HTML document"
+}
+
+class BODY {
+    override fun toString() = "Body content"
+}
+
+fun main() {
+    html {
+        body {
+            // Content
+        }
+    }
+}
+            </code></pre>
+            <h3>10.2 Reflection and Annotations</h3>
+            <p>Explore reflection and annotations in Kotlin...</p>
+            <pre><code>import kotlin.reflect.full.*
+
+@Target(AnnotationTarget.CLASS)
+annotation class MyAnnotation
+
+@MyAnnotation
+class AnnotatedClass
+
+fun main() {
+    val clazz = AnnotatedClass::class
+    val annotation = clazz.findAnnotation<MyAnnotation>()
+    println("Annotation: $annotation")
+}
+            </code></pre>
+        </section>
+        <section id="module11">
+            <h2>Module 1: Introduction to Flutter</h2>
+            <h3>1.1 What is Flutter?</h3>
+            <p>Flutter is an open-source UI software development kit created by Google for building natively compiled applications...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Hello, Flutter!')),
+        body: Center(child: Text('Hello, World!')),
+      ),
+    );
+  }
+}
+            </code></pre>
+            <h3>1.2 History of Flutter</h3>
+            <p>Flutter was first released in May 2017 and has since evolved into a powerful framework for building cross-platform apps...</p>
+        </section>
+
+        <section id="module12">
+            <h2>Module 2: Flutter Basics</h2>
+            <h3>2.1 Flutter Setup</h3>
+            <p>To get started with Flutter, you need to install Flutter SDK, set up your environment, and create a new project...</p>
+            <pre><code>flutter create my_app
+cd my_app
+flutter run
+            </code></pre>
+            <h3>2.2 Basic Flutter App Structure</h3>
+            <p>A basic Flutter app consists of the `main` function, a `MyApp` widget, and a `Scaffold`...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Basic Flutter App')),
+        body: Center(child: Text('Welcome to Flutter')),
+      ),
+    );
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module13">
+            <h2>Module 3: Widgets</h2>
+            <h3>3.1 Stateless Widgets</h3>
+            <p>Stateless widgets are immutable and their properties cannot change once they are created...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+class MyStatelessWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text('I am a stateless widget');
+  }
+}
+            </code></pre>
+            <h3>3.2 Stateful Widgets</h3>
+            <p>Stateful widgets maintain state that can change during the lifetime of the widget...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+class MyStatefulWidget extends StatefulWidget {
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Text('I am a stateful widget');
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module14">
+            <h2>Module 4: State Management</h2>
+            <h3>4.1 State Management Overview</h3>
+            <p>State management is crucial in Flutter for managing state across widgets...</p>
+            <pre><code>import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+void main() {
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Counter(),
+      child: MyApp(),
+    ),
+  );
+}
+
+class Counter with ChangeNotifier {
+  int _count = 0;
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners();
+  }
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('State Management')),
+        body: Center(
+          child: Consumer<Counter>(
+            builder: (context, counter, child) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text('Count: ${counter.count}'),
+                  ElevatedButton(
+                    onPressed: () => counter.increment(),
+                    child: Text('Increment'),
+                  ),
+                ],
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module15">
+            <h2>Module 5: Navigation</h2>
+            <h3>5.1 Navigating Between Screens</h3>
+            <p>Flutter provides several ways to navigate between screens...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: FirstScreen(),
+    );
+  }
+}
+
+class FirstScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('First Screen')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondScreen()),
+            );
+          },
+          child: Text('Go to Second Screen'),
+        ),
+      ),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Second Screen')),
+      body: Center(child: Text('Welcome to Second Screen')),
+    );
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module16">
+            <h2>Module 6: Network Requests</h2>
+            <h3>6.1 Making HTTP Requests</h3>
+            <p>To make network requests, use the `http` package...</p>
+            <pre><code>import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Network Requests')),
+        body: Center(child: FetchData()),
+      ),
+    );
+  }
+}
+
+class FetchData extends StatefulWidget {
+  @override
+  _FetchDataState createState() => _FetchDataState();
+}
+
+class _FetchDataState extends State<FetchData> {
+  String data = '';
+
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+  }
+
+  fetchData() async {
+    final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
+    setState(() {
+      data = response.body;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(data);
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module17">
+            <h2>Module 7: Local Storage</h2>
+            <h3>7.1 Storing Data Locally</h3>
+            <p>Flutter offers various ways to store data locally...</p>
+            <pre><code>import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  String _data = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadData();
+  }
+
+  _loadData() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _data = prefs.getString('data_key') ?? 'No data';
+    });
+  }
+
+  _saveData() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('data_key', 'Saved data');
+    _loadData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Local Storage')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(_data),
+            ElevatedButton(
+              onPressed: _saveData,
+              child: Text('Save Data'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module18">
+            <h2>Module 8: Animations</h2>
+            <h3>8.1 Basic Animations</h3>
+            <p>Flutter makes it easy to add animations to your app...</p>
+            <pre><code>import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    )..repeat(reverse: true);
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Animations')),
+      body: Center(
+        child: FadeTransition(
+          opacity: _animation,
+          child: FlutterLogo(size: 100),
+        ),
+      ),
+    );
+  }
+}
+            </code></pre>
+        </section>
+
+        <section id="module19">
+            <h2>Module 9: Testing</h2>
+            <h3>9.1 Unit Testing</h3>
+            <p>Testing is crucial for ensuring code quality...</p>
+            <pre><code>import 'package:flutter_test/flutter_test.dart';
+
+void main() {
+  test('Example test', () {
+    expect(1 + 1, equals(2));
+  });
+}
+            </code></pre>
+        </section>
+
+        <section id="module20">
+            <h2>Module 10: Deployment</h2>
+            <h3>10.1 Deploying to App Stores</h3>
+            <p>Learn how to prepare your Flutter app for deployment to the App Store and Google Play...</p>
+            <pre><code>flutter build apk
+flutter build ios
+            </code></pre>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script> 
+</body>
+</html>

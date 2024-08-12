@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="37048402662-removebg.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Programming Course</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background: #ffd902;
+            color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .header-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .header-buttons button {
+            background: #ffd902;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons button:hover {
+            background: #ffb600;
+        }
+
+        .toggle-btn {
+            background: white;
+            color: #333;
+        }
+
+        .toggle-btn:hover {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #312f2f;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        /* Dark mode styling */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background: #1f1f1f;
+        }
+
+        body.dark-mode h1 {
+           color: #ffffff;
+        }
+        body.dark-mode h2 {
+           color: #ffffff;
+        }
+        /* body.dark-mode h3 {
+           color: #ffffff;
+        } */
+        
+        body.dark-mode main {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode pre {
+            background: #2c2c2c;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .header-buttons button {
+            background: #333;
+            color: #fff;
+        }
+
+        body.dark-mode .header-buttons button:hover {
+            background: #444;
+        }
+
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        body.dark-mode .toggle-btn:hover {
+            background: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SQL Programming Course</h1>
+        <div class="header-buttons">
+            <button id="homeBtn">🏠</button>
+            <button class="toggle-btn" id="toggleBtn">🌚</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#module1">Introduction</a></li>
+                <li><a href="#module2">Basic Queries</a></li>
+                <li><a href="#module3">Data Manipulation</a></li>
+                <li><a href="#module4">Joins</a></li>
+                <li><a href="#module5">Subqueries</a></li>
+                <li><a href="#module6">Indexes & Views</a></li>
+                <li><a href="#module7">Transactions</a></li>
+                <li><a href="#module8">Stored Procedures</a></li>
+                <li><a href="#module9">Advanced Topics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="module1">
+            <h2>Module 1: Introduction to SQL</h2>
+            <h3>1.1 What is SQL?</h3>
+            <p>SQL (Structured Query Language) is a standard language for managing and manipulating relational databases...</p>
+            <pre><code>-- SQL Example: Creating a table
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY,
+    Username VARCHAR(50),
+    Password VARCHAR(50)
+);
+            </code></pre>
+            <h3>1.2 SQL Database Management Systems (DBMS)</h3>
+            <p>SQL can be used with various DBMSs such as MySQL, PostgreSQL, SQLite, and SQL Server...</p>
+        </section>
+
+        <section id="module2">
+            <h2>Module 2: Basic Queries</h2>
+            <h3>2.1 SELECT Statement</h3>
+            <p>The SELECT statement is used to retrieve data from a database...</p>
+            <pre><code>-- SQL Example: Selecting data
+SELECT * FROM Users;
+            </code></pre>
+            <h3>2.2 Filtering Results</h3>
+            <p>Use the WHERE clause to filter records based on specific conditions...</p>
+            <pre><code>-- SQL Example: Filtering results
+SELECT * FROM Users
+WHERE Username = 'john_doe';
+            </code></pre>
+        </section>
+
+        <section id="module3">
+            <h2>Module 3: Data Manipulation</h2>
+            <h3>3.1 INSERT INTO Statement</h3>
+            <p>The INSERT INTO statement is used to add new rows to a table...</p>
+            <pre><code>-- SQL Example: Inserting data
+INSERT INTO Users (UserID, Username, Password)
+VALUES (1, 'john_doe', 'password123');
+            </code></pre>
+            <h3>3.2 UPDATE Statement</h3>
+            <p>The UPDATE statement is used to modify existing data...</p>
+            <pre><code>-- SQL Example: Updating data
+UPDATE Users
+SET Password = 'newpassword456'
+WHERE Username = 'john_doe';
+            </code></pre>
+            <h3>3.3 DELETE Statement</h3>
+            <p>The DELETE statement is used to remove rows from a table...</p>
+            <pre><code>-- SQL Example: Deleting data
+DELETE FROM Users
+WHERE Username = 'john_doe';
+            </code></pre>
+        </section>
+
+        <section id="module4">
+            <h2>Module 4: Joins</h2>
+            <h3>4.1 INNER JOIN</h3>
+            <p>INNER JOIN returns records with matching values in both tables...</p>
+            <pre><code>-- SQL Example: Inner join
+SELECT Orders.OrderID, Users.Username
+FROM Orders
+INNER JOIN Users ON Orders.UserID = Users.UserID;
+            </code></pre>
+            <h3>4.2 LEFT JOIN</h3>
+            <p>LEFT JOIN returns all records from the left table and matched records from the right table...</p>
+            <pre><code>-- SQL Example: Left join
+SELECT Users.Username, Orders.OrderID
+FROM Users
+LEFT JOIN Orders ON Users.UserID = Orders.UserID;
+            </code></pre>
+        </section>
+
+        <section id="module5">
+            <h2>Module 5: Subqueries</h2>
+            <h3>5.1 Basic Subqueries</h3>
+            <p>Subqueries are queries nested inside other queries...</p>
+            <pre><code>-- SQL Example: Subquery
+SELECT Username
+FROM Users
+WHERE UserID IN (SELECT UserID FROM Orders WHERE OrderID = 101);
+            </code></pre>
+            <h3>5.2 Correlated Subqueries</h3>
+            <p>Correlated subqueries reference columns from the outer query...</p>
+            <pre><code>-- SQL Example: Correlated subquery
+SELECT Username
+FROM Users u
+WHERE EXISTS (SELECT * FROM Orders o WHERE o.UserID = u.UserID AND o.OrderID = 101);
+            </code></pre>
+        </section>
+
+        <section id="module6">
+            <h2>Module 6: Indexes & Views</h2>
+            <h3>6.1 Indexes</h3>
+            <p>Indexes are used to improve query performance...</p>
+            <pre><code>-- SQL Example: Creating an index
+CREATE INDEX idx_username ON Users (Username);
+            </code></pre>
+            <h3>6.2 Views</h3>
+            <p>Views are virtual tables based on the result of a query...</p>
+            <pre><code>-- SQL Example: Creating a view
+CREATE VIEW UserOrders AS
+SELECT Users.Username, Orders.OrderID
+FROM Users
+INNER JOIN Orders ON Users.UserID = Orders.UserID;
+            </code></pre>
+        </section>
+
+        <section id="module7">
+            <h2>Module 7: Transactions</h2>
+            <h3>7.1 Transactions Overview</h3>
+            <p>Transactions are used to execute a series of SQL operations as a single unit...</p>
+            <h3>7.2 COMMIT and ROLLBACK</h3>
+            <p>COMMIT saves all changes made during the transaction, while ROLLBACK undoes them...</p>
+            <pre><code>-- SQL Example: Transaction
+BEGIN;
+UPDATE Users SET Password = 'finalpassword' WHERE Username = 'john_doe';
+COMMIT;
+            </code></pre>
+        </section>
+
+        <section id="module8">
+            <h2>Module 8: Stored Procedures</h2>
+            <h3>8.1 What are Stored Procedures?</h3>
+            <p>Stored procedures are precompiled SQL statements that can be executed as needed...</p>
+            <pre><code>-- SQL Example: Creating a stored procedure
+CREATE PROCEDURE GetUserByUsername(IN username VARCHAR(50))
+BEGIN
+    SELECT * FROM Users WHERE Username = username;
+END;
+            </code></pre>
+        </section>
+
+        <section id="module9">
+            <h2>Module 9: Advanced Topics</h2>
+            <h3>9.1 Advanced Joins</h3>
+            <p>Exploring more complex join operations...</p>
+            <h3>9.2 Window Functions</h3>
+            <p>Window functions perform calculations across a set of table rows...</p>
+            <pre><code>-- SQL Example: Window function
+SELECT Username, RANK() OVER (ORDER BY OrderCount DESC) AS Rank
+FROM Users;
+            </code></pre>
+            <h3>9.3 Optimization Techniques</h3>
+            <p>Techniques to optimize SQL queries for better performance...</p>
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDarkMode = body.classList.contains('dark-mode');
+            toggleBtn.innerHTML = isDarkMode ? '🌞' : '🌚';
+        });
+        document.getElementById('homeBtn').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+</body>
+</html>
